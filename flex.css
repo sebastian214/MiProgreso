@@ -1,0 +1,248 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+h1, h2, h3, h4, p, div, section, article{
+    margin: 1rem 0px 1rem 0px;
+}
+p::after{
+    content: "."; /* punto al final de los parrafos */
+}
+/* +++++++++++FIN GENERALES++++++++++++++ */
+
+
+/*************CONTENIDO************ */
+.contenedor{
+    border: 1px solid black;
+    width: 20%;
+    height: 30vh;
+    background-color: rgb(198, 187, 187);
+}
+.hijo{
+    border: 1px solid red;
+    background-color: antiquewhite;
+}
+.inline{
+    display: inline-flex;
+}
+
+.cont-nowrap{
+    width: 70%;
+    display: inline-flex;
+}
+
+/* Nowrap */
+.nowrap{
+    width: 50%;
+}
+
+
+
+/* cross-axis */
+.cross-axis{
+    width: 70%;
+    height: 20vh;
+    background-color: aquamarine;
+    display: flex;
+    gap: 5px;
+}
+.cross-hijo{
+    background-color: bisque;
+    border: 1px solid black;
+    margin: 0;
+}
+.hijo-start{
+    height: 3rem;
+}
+.padre-x{
+    flex-direction: column;
+    height: 29vh;
+    align-items: flex-start;
+
+}
+.cross-x{
+width: 20%;
+}
+.cont{
+    width: 100%;
+    height: 45vh;
+    background-color: aquamarine;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: stretch;
+    /* align-items: stretch; */
+}
+.cont__hijo{
+    border: solid 1px red;
+    /* width: 15%; */
+    /* height: 10rem; */
+    margin: 0;
+}
+.cont p:last-child{
+    width: 12rem;
+    background-color: bisque;
+    font-size: 30px;
+    border: 1px solid black;
+}
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    border: 1px solid black;
+    align-items: stretch;
+}
+.hijo22{
+    border: 1px solid red;
+    margin: 0;
+}
+
+
+
+/* Propiedades para los hijos */
+
+
+/* flex-grow */
+.contenedor-grow{
+    width: 100%;
+    background-color: azure;
+    border: 1px solid red;
+    display: flex;
+}
+.grow-hijo{
+    border: 1px solid black;
+    background-color: burlywood;
+    margin: 0; /* por el reseteo */
+    flex-grow:1;
+}
+.crecimiento{
+    flex-grow: 4;
+}
+
+
+
+/* flex-shrink */
+.cont-shrink{
+    width:25%;
+    height: 20vh;
+    border: 5px solid red;
+    display: flex;
+}
+.hijo-shrink{ 
+    width: 2.5rem; 
+    border: 1px solid black;
+    background-color: beige;
+    
+    margin: 0;
+    
+}
+.cont-shrink p{
+    font-size: 1vw;
+}
+
+.cont-shrink div:last-child{
+	flex-shrink: 5;
+    
+}
+
+
+
+/* flex-basis */
+.cont-basis{
+    width: 70%;
+    height: 30vh;
+    border: 1px solid red;
+    display: flex;
+}
+.hijo-basis{
+    background-color: aquamarine;
+    border: 1px dashed black;
+    flex-basis: 200px;
+    margin: 0;
+}
+
+
+
+/* shorthand flex */
+.cont-flex{
+    width: 70%;
+    height: 30vh;
+    border: 1px solid red;
+    display: flex;
+}
+.hijo-flex{
+    background-color: aquamarine;
+    border: 1px dashed black;
+    margin: 0;
+    flex: 0 1 150px;
+}
+
+
+
+
+/* Orden y Alineacion de hijos */
+.cont-order{
+    width: 70%;
+    height: 30vh;
+    border: 3px solid red;
+    display: flex;
+}
+.hijo-order{
+    border: 1px solid red;
+    margin: 0;
+    background-color: aquamarine;
+    flex-basis: 100px;
+}
+.hijo-order:nth-child(2){
+    order: 1;
+}
+
+
+.cont-self{
+    width: 70%;
+    height: 30vh;
+    border: 3px solid red;
+    display: flex; 
+}
+.hijo-self{
+    border: 1px solid red;
+    margin: 0;
+    background-color: aquamarine;
+}
+.hijo-self:nth-child(3){
+    align-self: flex-end;
+}
+
+
+
+
+/* Grid-responsive sin Media Query*/
+.coontenedor{
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    background-color: antiquewhite;
+}
+.coonetenedor__flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+}
+.article-flex{
+    flex: 1 1 15rem;
+    background-color: aquamarine;
+    border: 1px solid red;
+    margin: 0;
+
+    
+}

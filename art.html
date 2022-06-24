@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos Visuales y Movimientos</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="art.css">
+</head>
+<body>
+    <h1 id="arriba">Temario</h1>
+<div class="temario-grid">
+    <ol class="columna1">
+        <li> <a href="#sombras">Sombras</a></li>
+        <li> <a href="#filter">Drop-Shadow para imagenes</a></li>
+        <li> <a href="#lineal-gradient">Lineal Gradient</a</li>
+        <li> <a href="#radial-gradient">Radial Gradient</a></li>
+        <li> <a href="#conic-gradient">Conic-Gradient</a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+    </ol>
+    <ol class="columna2">
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+    </ol>
+    <ol class="columna3">
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+    </ol>
+    <ol class="columna4">
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+        <li> <a href="#"></a></li>
+    </ol>
+</div> <br> 
+<h1 id="sombras">Sombras</h1> <br>
+    <h2>Box-shadow</h2>
+    <p>esta propiedad va a tener los siguientes apliques; <b>mov-x  /  mov-y  /  blur-radius  /  espancion-blur  /  color (eredado de la fuente) /  ouset-inset (interna o externa) inset</b></p>
+<div class="box box-shadow" >
+
+</div> 
+<br> <br> <br> <br>
+<div class="box box-shadow-inverter" >
+
+</div> 
+<br> <br> <br> <br>
+<div class="box box-shadow-inset" >
+
+</div>
+<p>-Se pueden ir <b> agrupando sombras colocando una , </b>como background-image</p>
+<br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+
+<h1 id="filter">Drop-Shadow para imagenes</h1>
+<p> <b>APLICABLE A IMAGENES CON FONDO TRANSPARENTE</b></p>
+<p>esta propiedad va a tener los siguientes apliques; <b>mov-x  /  mov-y  /  blur-radius   /  color</b></p> <br>
+<div class="box-img-filter">
+    <img src="./arbol.png" alt="arbol">
+</div>
+<br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="lineal-gradient">Lineal-Gradient</h1>
+<p>Linear gradient se va a aplicar dentro de la propiedad background-image como buena practica, seguido de los grados (deg) de aplicacion. Cada valor va a ser separado por una coma. A cada color se la puede especificar en % la proporcion que va a ocupar de la caja.</p> <br>
+<div class="linear-gradient">
+
+</div>
+<p>Por defecto los gradient se aplican en 90 grados eje (y)</p>
+<br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="radial-gradient">Radial Gradient</h1> <br>
+<p>Si la caja contenedora no es parfectamente cuadrada el radial gradient se va a adaptar estirandose tanto como en el oje x como en el y, si queremos un circulo podemos usar el valor <b>circle, adicionalmente se le puede asignar un valor a este circulo y elegir su posicion con el valor; <b>at bottom </b> </p> <br>
+<div class="radial-gradient"></div> <br>
+<div class="radial-gradient-bottom-left"></div>
+<p>Probemos hacer la bandera de Japon!</p><br>
+<div class="radial-gradient-japon"></div> 
+<p>En la bandera de japon seleccionamos el valor de <b>circle</b> para que sea un circulo perfecto, luego definimos los colores y sus valores sin darle espacios entre ellos para no dejar degradar el color</p>
+<h2>ANOTACION!!: asi como tenemos el valor de circle tambien tenemos elipse y a este se le van a especifica los dos valores del mismo (<b>X / Y</b> )</h2>
+<br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="conic-gradient">Conic Gradient</h1> <br>
+<p>Vamos a contar desde el eje Y a las 00hs como un reloj, utilizando grados o porcentajes, este inicio en 0 grados anguloY se puede cambiar con el valor de <b>from 90deg (ejemplo)</b> </p> <br>
+<div class="conic-gradient"></div>
+
+
+
+<br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+</body>
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1 id="arriba">Temario</h1>
+    <div class="temario-grid">
+    <ol class="columna1">
+        <li><a href="#selectores-avanzados"> Selectores Avanzados</a></li>
+        <li><a href="#display">Propiedad Display</a> </li>
+        <li> <a href="#visibility">Propiedad visibility</a></li>
+        <li> <a href="#Overflow">Propiedad Overflow</a></li>
+        <li><a href="#box-sizing">Propiedad box-sizing (Tamaño de caja)</a> </li>
+        <li> <a href="#colapso">Colapso de Margenes Verticales</a></li>
+        <li> <a href="#centrado">Centrado de Cajas</a></li>
+        <li> <a href="#posicionamiento">Posicionamientos</a></li>
+        <li> <a href="#z-index">Z-index(Profundidad eje z)</a></li>
+        <li> <a href="cabecera-fixed.html">Cabecera Fixed Ejemplo</a></li>
+        <li> <a href="cabecera-sticky.html">Cabecera Sticky Ejemplo</a></li>
+        <li> <a href="ventana-modal-fixed.html">Efecto de Ventana Modal con fixed</a></li>
+    </ol>
+    <ol class="columna2">
+        <li><a href="#transparencia-currentColor"> Transparencia y CurrentColor</a></li>
+        <li><a href="#unidades">Unidades de Medida</a> </li>
+        <li> <a href="#variables-funciones">Variables y Funciones</a></li>
+        <li> <a href="#fuentes-textos">Estilo de Fuentes y Textos</a></li>
+        <li><a href="#fuentes-externas">Fuentes Externas</a> </li>
+        <li> <a href="#estilos-textos">Estilos de Textos</a></li>
+        <li> <a href="#border-radius">Border Radius</a></li>
+        <li> <a href="#outline">Outline</a></li>
+        <li> <a href="#fondos">Estilos de fondo(backgrounds propiedades)</a></li>
+        <li> <a href="#fondos-multiples">Fondos Multiples</a></li>
+        <li> <a href="#estilo-imagenes">Estilo de Imagenes</a></li>
+        <li> <a href="#estilo-listas">Imagenes como viñetas de listas</a></li>
+    </ol>
+    <ol class="columna3">
+        <li><a href="#list-style"> Estilo de Listas</a></li>
+        <li><a href="#list-colum">Listas y Parrafos en Columnas</a> </li>
+        <li> <a href="#estilo-formularios">Formulario css</a></li>
+        <li> <a href="./art.html">Efectos y Movimientos</a></li>
+        <li><a href="./flex.html">Display-flex</a> </li>
+        <li> <a href="./grid.html">Display-grid</a></li>
+        <li> <a href="./responsive">Responsive</a></li>
+    </ol>
+    </div>
+    <br> <hr>
+    <H1 id="selectores-avanzados" class="contenedor">Selecores Avanzados</H1>
+    <ul class="ul-temario">
+        <li><a href="#hermanos-adyacentes">Selectores de hermanos y adyacentes</a> </li>
+        <li><a href="#atributos">Selectores de Atributos</a> </li>
+        <li><a href="#pseudoclases">Pseudoclases</a></li>
+        <li><a href="#pseudoelementos">Pseudoelementos</a></li>
+    </ul> <br>
+    <h2>selectores de hijos</h2>      
+    <p>para seleccionar un hijo directo en css la sintaxis es: .padre > hijo </p> <br>
+    <h2>Selector Desendiente</h2>
+    <p>Aplica a cualquier clase sin importar el orden Sintaxis: .padre hijo</p> <br>
+    <hr>
+    <h1 id="hermanos-adyacentes">Selecrores de hermanos hay de dos tipos; general y adyacentes</h1>
+    <h2>selectores de hermanos en grl</h2>
+    <ol>
+        <ul class="seleccionando todos los hermanos">hermano1</ul>
+        <ul>hermano2</ul>
+    </ol>
+    <p>Selecciona a los hermanos que esten por debajo, la sintaxis seria; .seleccionando todos los hermanos ~ ul</p>
+    <h2>selecores de hermanos adyacentes</h2>
+    <p>el selectore de hermanos adyasentes solo aplica al primer hermano que esta por debajo y es de igual caracreristica, la sintaxis es .seleccionando + ul o li + li </p>
+    <hr> <br>
+    <a href="#arriba">TOP↑</a>
+    <h1 id="atributos">Selectores de atributos</h1>
+    <p>Los selectores de atributos avanzados aplican a un atributo en especifico dentro de uno o mas padres la sintaxis es; .selectores-atributos a[href] {
+        }</p>
+    <p>tambien se puede expecificar un valor por ejemplo sintaxis: .selectore-atributos a[target]="_blank"{
+        } este selector solo aplicaria a el atriburo taget que contenga el valor _blnk
+    </p> 
+    <h2>Selectores de atributo con logica/comodin</h2>
+    <p> especificar que queremos seleccionar un enlace que contenga un texto en especifico ejemplo sintaxis: 
+    .selectores-atributos a [href*="jonmircha"] dentro del [ ] colocamos el atributo y seleccionamos un texto en especifico con *="nombre"   
+    </p>
+    <p>Otro comodin es el circunflejo (^) con este comodin se puede especificar el texto solo del comienzo del link por ejemplo;</p>
+    <ul>
+        <li> <a href="https//ndwjendwejid">https</a></li>
+        <li> <a href="https//ndwjendwejid">https</a></li>
+        <li> <a href="www.//ndwjendwejid">www</a></li>
+    </ul>
+    <p>Aqui podemos especificar no un texto dentro del link comleto si no al primer texto seguido del atributo href, sintaxis;[href^="www"] ANOTACION: no solo tienen que ser texto si no numeros o caracteres especiales etc.
+        Si queremos aplicar a el texto que termina cambiamos el circunflejo por el $    
+    </p>
+    <p>Otro comodin es la ~ y selecciona un texto que este dentro de una clase por ejemplo sintaxis; .selectores-atributos [class~="cursos"] la palabra tiene que estar separada por espacios como si fueran varias clases
+    </p>
+    <h2>hay mas selectores comodin</h2>
+    <hr> 
+    <hr>
+    <a href="#arriba">TOP↑</a>
+    <h1 id="pseudoclases">Pseudoclases</h1>
+    <br> <p>Las pseudoclases de identifican por tener <b>: antes de la misma</b></p>
+    <h2>Pseudoclases para formularios</h2>
+    <p>Las pseudoclases se aplican cuando la etiqueta tiene o se aplica la propiedad que ma misma pseudoclase aclara por ejemplo Requiered, la sintaxis .seudoclases:requiered{ va a aplicar estilos a la etiqueta que contenga ese atributo</p>
+        <form action="" class=" seudoclases">
+            <input type="text" required class="mocos"> <br>
+            <input type="email" required class="mocos" > <br>
+            <input type="submit" name="" id="">
+        </form>
+        <p>Valid e Invalid va a asegurarde de que el contenido sea valido a su funcionalidad </p>
+
+    <h2>Pseudoclases para enlaces</h2>    
+    <nav class="menu-pseudoclases">
+        <a href="#ds">Inicio</a>
+        <a href="#frg">Contactans</a>
+        <a href="#drf5">Empresa</a>
+    </nav>  
+    <p>:hover aplica a cualquier contenido al pasar el cursor, <br> :visited aplica a los enlaces visitados 
+    </p>  
+    <p>Si se le aplicara mas de una pseudoclase a un link estas deben estar en un orden siendo estas  <br> :link <br> :active <br> :visited <br> :hover (esta siempre va a lo ultimo)</p> <br>
+    <h2>Pseudoclases por posicion dentro de si contenedor</h2>
+    <p>Selecciona en el contenedor padre que hijo quieres modificar segun su posicion, por ejemplo sintaxis: .pseudoclases__posicion li:first-child{
+        en este caso va a seleccionar al primer elemento li
+    </p> <br>
+    <p>Para seleccionar uno en especifico usaremos nth-child(x)
+        Ejemplo Sintaxis; pseudoclases__posicion li:nth-child(4)  
+        Esto va a pintar el 4to li
+    </p>
+    <br><p>
+       seleccionar pares e impares siendo <b>even</b> par y <b>odd</b> par la sintaxis seria; :nth-child(even)
+    </p>
+    <ol class="pseudoclases__posicion">
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+        <li>mocos</li>
+    </ol>  
+    <p>Tambien podemos elegir el primero en tu tipo(etiqueta)</p>
+    sintaxis: <b>.articulo p:first-of-type{}</b>
+    esto va a aplicar al primer P dentro de el .articulo
+    Para elegir el ultimo usamos el <b>last-of-type</b>
+<article class="articulo">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</article> <br>
+<p>Tambien podemos elegir uno en especifico con <b>:nth-of-type{</b></p>
+<br>
+<p>Podemos excluir una etiqueta en particular dentro de un contenedor cuando estilizamos con selectores universales ejemplo sintaxis <b>.articlulo *:not(p)</b>  la seudoclase :not() va a excluir un tipo de elemento</p>
+<br><br>
+<a href="#arriba">TOP↑</a>
+<h1 id="pseudoelementos">Pseudoelementos</h1>
+<p>Los Pseudoelementos se identifican por tener <b> :: antes del elemento</b> 
+    <h2>Pseudoelementos ajenos al contenido</h2>
+<br>los primeros  que vamos aver son <b>::after y ::before</b>, estos van posicionar contenido antes de el elemento seleccionado utilizando el atributo content. Ejemplo sintaxis: <b>.elemento::before{
+conten: ❤ $ texto;
+</b></p>
+<span class="elemento1">Me gustaria que </span> <span class="elemento2"> y que </span> <span class="elemento3">solo por que si </span> <br>
+<br> <h2>Pseudoelementos para modificacion de contenido</h2>
+<p><b>::first-letter</b> esta aplica a la primer letra de un parrafo, y <b>::first-line esta aplica a la primer linea de un texto</b></p> <br>
+<div class="pseudoelementos">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur architecto et. Consequatur necessitatibus saepe quibusdam repudiandae itaque nesciunt assumenda?orem ipsum dolor sit amet consectetur adipisicing elit. A pariatur architecto et. Consequatur necessitatibus saepe quibusdam repudiandae itaque nesciunt assumenda?</p>
+</div>
+<br>
+<P>Otro pseudoelemento es el <b>::selection</b> este aplica cambiando estilos al seleccionar el contenido con el cursor </P>
+<p class="pseudoelementos-selection">
+    Lorem ipsum dolor sit amet.
+</p>
+<p>Otro elemento es ::Placeholder, este va a cambiar el estilo de este atributo en los formularios </p> <br> <br>
+<a href="#arriba">TOP↑</a>
+<br> <br> <br> <br>
+<h1 id="display">Display</h1>
+<h2>Las cajas de bloque son generan un salto de linea, sin permitir etiquetas a su lado y las  cajas de linea mantienen una linea, permitiendo mas etiquetas a su lado, sin permitir cambios de ancho y alto</h2> <br>
+<div class="caja-bloque"></div> <span class="caja-linea">Lorem ipsum dolor sit amet.</span> <br> <br><br><br>
+<p>Los elementos de linea si van a aceptar <b>padding</b> pero el va a seguir siempre en su linea poniendose por delante de los demas elementos </p>
+<p>Los elementod de linea van a admitir <b>Margin</b> pero solo a lo horizontal, verticalmente no ya  que este siempre va a mantener su linea</p>
+<p>Mas Propiedades de display;</p>
+<p>Display inline-block</p>
+<p>Display none</p>
+<p>Display table</p>
+<p>Display list-table</p>
+<p>Display flex</p>
+<p>Display grid</p> <br>
+<p>Display-inline-block: este permite que una etiqueta de linea hacepte todas las medidad de una de bloque manteniendo ciertas propiedades, como la de aplilar etiquetas una al lado de la otra</p>
+<br><br>
+<span>mocos</span> <span>mocos</span>
+<a href="#arriba">TOP↑</a>
+<hr> <br><br>
+
+<h1 id="visibility">Propiedad visibility</h1>
+<p>La propiedad visibility tiene dos valores <b>visibility por defecto y  hidden </b> Esta ultima propiedad <b>Hidden oculta el elemento pero conserva el espacio</b></p>
+<div class="visibility">
+    <p>Este texto no se va a ver pero si va a ocupar espacio</p>
+</div>
+<a href="#arriba">TOP↑</a> <br>
+<hr>
+<br>
+<h1 id="Overflow">Overflow</h1>
+<p>Esta propiedad nos permite decidir que va a pasar con el contenido que desborde su caja contenedora</p>
+<ol>
+<li>overflow-wrap</li>
+<li>overflow-x</li>
+<li>overflow-y</li>
+<li>overflow</li>
+<li>text-overflow</li>
+</ol>
+<h2>Overflow: visible</h2>
+<p>En este estado que <b>Viene por defecto</b> el contenido desborda la caja contenedora</p>
+<div class="overflow-visible"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt illo magni suscipit quia. Voluptatum pariatur optio eius nemo. Obcaecati laborum esse eius error, repudiandae vero accusantium dolores minus ut qui eos distinctio odit placeat</p></div> <br> <br><br><br>
+<h2>Overflow: hidden</h2>
+<p>Este valor va a ocultar el contenido que desborde</p>
+<div class="overflow-hidden"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt illo magni suscipit quia. Voluptatum pariatur optio eius nemo. Obcaecati laborum esse eius error, repudiandae vero accusantium dolores minus ut qui eos distinctio odit placeat</p></div> <br> <br>
+<h2>Overflow: scroll</h2>
+<p>Este valor le agrega un scroll a aquel contenido que contiene la propiedad hidden para que se pueda ver el contenido</p>
+<div class="overflow-scroll"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt illo magni suscipit quia. Voluptatum pariatur optio eius nemo. Obcaecati laborum esse eius error, repudiandae vero accusantium dolores minus ut qui eos distinctio odit placeat</p></div> <br> <br>
+<h2>Overflow: auto</h2>
+<p>Este genera una barra de desplazamiento como scroll sol a donde la necesite, nos genera un <b>Overflow hidden y luego un scroll automatico donde lo necesite, ya sea en el eje Y o X</b></p>
+<div class="overflow-auto"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt illo magni suscipit quia. Voluptatum pariatur optio eius nemo. Obcaecati laborum esse eius error, repudiandae vero accusantium dolores minus ut qui eos distinctio odit placeat</p></div> <br> <br>
+<h2>Anotacion📎</h2> <p>Poedemos especificar un eje al overflow
+    ejemplo Sintaxis: <b>Overflow-y: scroll o usaar el eje x</b>
+</p>
+<a href="#arriba">TOP↑</a> <br>
+<hr> <br><br>
+<h1 id="box-sizing">box-sizing</h1>
+<p>La propiedad box-sizing nos va a determinad desde donde va a empezar a considerar el tamaño de la caja, por defecto esta propiedad viene con el valor de <b>content-box</b> desde el contenido  </p> <br>
+
+<div class="tamaño-caja">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque possimus ipsam vero! Tempore, itaque doloribus harum excepturi et veritatis?
+</div>
+<p>en este caso el tamaño de la caja se adapta al contenido</p>
+<h2>Anotacion📎</h2> <p>Con este valor por defecto <b>content-box</b> el padding y los border que agreguemos va a agrandar el tamaño asignado de la caja ya que el tamaño se considera desde el contenido</p>
+<div class="content-box">
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<p>en la sigiente caja podemos ver como el padding agrando la caja ya que la amplicacion se hace desde el contenido.</p> <br>
+<h2>Valor border-box</h2>
+<p>A diferencia de content-box este valor hace que el tamaño se considere desde el borde para adentro, modificando el contenido</p>
+<div class="border-box">
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<p>En este caso vemos que el tamaño de la caja y los margenes y bordes que le pongamos va a ignorar el contenido y va a ir metiendose dentro de la caja hasta llegar a desplazar el contenido</p>
+<div class="border-box-padding">
+    <p>Lorem ipsum dolor sit amet.</p>
+</div> <br> <hr> <br> <br>
+<h1 id="colapso">Colapso de Margenes Verticales</h1>
+<p>En css hay una regla que nos dice que los margenes verticales de dos elementos se colapzan (no se suman)</p>
+<br>
+<div class="colapso-padre">
+    <div class="colapso">
+        <p>colapso vertical caja 1</p>
+    </div>
+    <div class="colapso">
+        <p>colapso vertical caja 2</p>
+    </div>
+  
+</div> <br><br><br>
+<p>En el sigiente ejemplo vemos como teniendo margin de 5rems top y bottom, entre las dos cajas solo hay 5 rems y estos no se estan sumando</p>
+<h2>Anotacion📎</h2> <p>Es una buena practica que verticalmente se maquete con un solo estilo de margenes por ejemplo si armamos un contenedor con varios elementos aplicarle a todos un margin top para no tener errores de margenes</p> 
+<a href="#arriba">TOP↑</a> <br>
+<hr> <br><br>
+<h1 id="centrado">Centrado de Cajas</h1>
+<p>Para centrar una caja de utiliza un margen izquierdo y derecho en automatico  <b>No es buena practica usar margin:0 auto;</b></p>
+<div class="caja-centrada"></div>
+<p>Para centrar texto dentro de la caja se va a utilizar <b>Text-align:center;</b></p> <hr> <br><br>
+<h1 id="posicionamiento">Posicionamientos</h1>
+<ol>
+    <li>static</li>
+    <li>relative</li>
+    <li>absolute</li>
+    <li>fixed/fijo</li>
+    <li>sticky/pegajoso</li>
+</ol>
+<p>Para mover los elementos seleccionados utilizamos las siguientes propiedades <br>top(vertical -eje Y) <br>bottom (vertical -eje y) <br>left (horizontal -eje X) <br>rigth (horizontal -eje X) <br>z-index (profundidad -eje Z)</p>
+<h2>ANOTACION IMPORTANTE 📎</h2>
+<p>Las propiedades <b>top y left van a tener preferencia por sobre bottom y rigth en la modificacion de los elementos con posiciones ajenas a static, ejemplo position: relative;, Los contenedores van a haceptar valores negativos ejemplo: top -50px</b></p>
+<h2>Static</h2>
+<p>Es el posicionamiento natural de los elementos por defecto y no hacepta las propiedades de modificacion antes mencionadas</p>
+<br>
+<h2>Posicionamiento Relative</h2>
+<p>En el posicionamiento relative el contenedor va a conservar su display sin modificar su tamaño ni flujo estandart(static), acepta las modificaciones antes mencionadas, y si este se modifica el espacio que ocupe en el html va a seguir ocupandolo, si se le aplica cambios de ancho y de alto tambien se va a modificar este espacio original del elemento</p>
+<div class="relative">
+    <p>Este contenedor tiene un posicionamiento relativo</p>
+</div> <br>
+<h2>Poicionamiento Absoluto</h2>
+<p>Los elementos con position absolute NO van a conservar sus dimensiones tampoco asi su display original, tambien va a haceptar las propiedades mencionadas como top: 50px; y va a perder el espacio original en el html no ocupando mas espacios que el mismo contenido absoluto.</p>
+<h2>ANOTACION IMPORTANTE 📎 el contenedor absoluto va a tomar como referencia para moverse su primer ancestro (padre) con posicionamiento relativo, al modificarle su ubicacion con top y left, si no encuentra un ancestro va a moverse respecto del documento html, <b>no al body ya que este no es relativo</b> posicionandose en el flujo estandar de izq a derecha</h2> <br>
+<p class="absolute">Este texto tiene un posicionamiento absoluto</p> <br> <br>
+<h2>Posicionamiento Fixed</h2>
+<p>Los elementos con posicionamiento fixed tambien van a perder su tamaño asignado, y su display original. su posicion va a ser asignada en base al documento html en base a el VH y este va a quedar fijo, no siguiendo es scroll, ya que quedara fijo en la posicion asignada </p>
+<h2>ANOTACION!📎 Esta propiedad se utiliza para dejar barras de navegacion fijas y demas. Siempre que se lo mueba va a tomar como base el documento html</h2>
+<p class="caja-fixed" >Esto es una caja fixed</p> <br>
+<h2>Posicionamiento sticky</h2>
+<p>Los elementos con posicionamiento pegajoso se van a comportar como un relative y un fixed, va a mantener su display y propiedades, y va a ser fijo desde la medida que se le indique, las propiedades de direcciones como top, left etc se van a utilizar para <b>asignar desde que posicion se va a comportar como un un posicionamiento fixed, tomando como referencia el body o su contenedor padre, este tiene que tener medidad definidas de lo contrario no funcionara</b></p>
+<h2>Anotacion📎 al finalizar la caja el objeto sticky desaparecera con su caja, ya que esta es funcional a la caja</h2>
+<div class="caja-sticky-padre">
+    <p class="caja-sticky">Esto es una caja sticky</p>
+     <br>
+</div>
+<a href="#arriba">TOP↑</a> <br><hr> <br>
+<h1 id="z-index">Propiedad Z-index</h1>
+<p>Z-index se le va a poder aplicar a los elementos hermanos que tengan otro position que no sea el natural de (static), si posicionamos un elemento por encima de otro <b>no estatic</b> el que pase al frente va a ser el que este mas abajo en el documento html ya que funciona como una cascada, esto se va a modificar aplicandole los valores z-index. En valor por defecto de z-index es auto y hace uso de la cascada de html. Cuando los elementos <b>No son hermanos y es un padre el que queremos traer al frente los valores enteros positivos en z-index no van a funcionar, Seria como si el hijo tendria una especificidad muy alta, ya que querer pasar al frente a un padre seria poco logico </b> en este caso se aplican valores negativos al hijo</p>
+<h2>Anotacion📎 Para que el hack de traer al frente a el padre por su hijo no es muy usado, aun que si lo necesitas usar recorda que  este se cancela si su elemento padre tiene cualquier valor de z-index definido en la hoja de estilos. en conclucion solo en este caso solo el hijo debe tener el z-index negativo definido</h2>
+<h2>Anotacion📎Una buena practica es modificar los z-index de 100 en 100 para no utilizar valores negativos si necesitamos jugar con varios elementos </h2> <br>
+<div class="caja-z-index-1">caja z-index 1</div>
+<div class="caja-z-index-2">caja z-index 2</div>
+<br>
+<p>Poniendo a su padre po sobre su hijo</p>
+<section class="padre-z-index">
+    <div class="hijo-z-index"></div>
+</section>
+<a href="#arriba">TOP↑</a> <br>
+<br> <hr> <br> <br>
+<h1 id="transparencia-currentColor">Transparecia y CurrentColor</h1>
+<h2>Transparecia</h2>
+<p>El valor Transparent va a aplicar un rgba de (0,0,0,0) Sintaxis background-color: transparent</p> <br>
+<h2>currentColor</h2>
+<p>El valor currentColor va a aplicar el color de la propiedad color de su ancestro mas cercano,
+    si su contenedor no tiene la propiedad de color aplicada la toma de el ancestro siguiente, pudiendo ser reste el body, el cual tiene una propiedad definida por el navegador y es black. Sintaxis background-color: currentColor; o border; 1px solid currentColor;
+</p>
+
+<a href="#arriba">TOP↑</a> <br> <hr> <br><br>
+<h1 id="opacity">Propiedad Opacity</h1>
+<p>La propiedad opacity va aplicar a cualquier elemento y va a modificar le nivel de opacidad de ellos</p>
+<br>
+<div class="opacidad">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, quam!</p>
+    <span>Opacity :=)</span>
+</div>
+<br><a href="#arriba">TOP↑</a> <br> <hr> <br><br>
+<h1 id="unidades">Unidades de Medida</h1>
+<h2>Existen dos tipos de unidades, las relativas y las absolutas</h2>
+<br> <h2>Unidades Absolutas:</h2>
+<p>Su tamaño va a ser el mismo siempre no adaptandose</p>
+<p>pc, cm, mm, in, Q</p>
+<p>-pt</p>
+<p>-px</p> <br>
+<h2>Unidades Relativas</h2>
+<p>Su tamaño es relativo a un contexto</p>
+<p>-em, rem, ex, ch (Siendo estas relativas al tamaño de la fuente)</p>
+<p><b>-em:</b> un em va a ser igual a el tamaño de fuente del documento html o de su ancestro mas proximo. Podemos tener una caja con un font-size de 24 px un em va a valer 24 px,</p> <br>
+<p><b>-rem:</b> un rem va s sr igual a el tamaño de fuente de el elemento raiz (html) que por defecto en la mayoria de navegadores es 16 px. El rem no va a tomar en cuenta las modificaciones tipeadas sobre el font-size en su contenedor, teniendo siempre el mismo tamaño a no ser que se le aplique un font-size distinto al html</p> <br>
+<p><b>-ex:</b>Relativo a la x minúscula
+    #menu1 {font-size: 2.65ex;}
+    Tantas veces la altura de la letra x minúscula como se especifique. Por ejemplo si la x minúscula que se debería mostrar mide 10mm, 1 ex son 10 mm, 1.5ex son 15mm, 2ex son 20mm, etc.</p> <p><b>Esta unidad no se utiliza demasiado solo en casos muy particulares como en lineas de tiempo</b></p> <br>
+    <p><b>-che:</b> Los CHs son unidades que toman como medida el acho del 0, danco como resultado una unidad de media especial para caracteres, por ejeplo, si necesitamos un contenedor ajustado a los caracteres ya sean numenos o letras o una textarea definida.</p>
+    <h2>Anotacion📎 Si el tamaño de fuente se modifica,los ch al ser relativo de los caracteres tambien va a seguir esta modificacion</h2> <br>
+    <div class="ch">1234567</div>
+    <div class="ch2">1234567</div>
+    <h2>Anotacion📎 esta unidad esta soportada por todos los navegadores actualmente y su uso es correcto en donde sea de utilidad</h2>
+    <br>
+    <h2>Unidades %</h2>
+    <p><b>-Unidades%</b>: su tamaño se rije por el tamaño del contenedor, y van del 1 al 100% estas medidas tambine van a poder aplicarse a todo el box model como a los textos, haciendolos responsivos </p> <br><a href="#arriba">TOP↑</a><hr><br><br>
+    <h1 id="variables-funciones">Variables y Funciones</h1>
+    <h2 >Variables (Custom Properties)</h2>
+    <p>Las variables en css siempre tienen que crearse dentro de un selector y se definen con -- . Las variables pueden crearse dentro de un contenedor y aplicarse solo a los hijos de ese contenedor o si queremos que sean variables para todo el documento vamos a generarlas desde el html, pero no podriamos generar variables con la etiqueta html por una cuestion de baja especificidad y para eso tenemos a la pseudoclase <b>root con mas especificidad</b> estas mismas van a definirse con un nombre y un valor, el nombre va a ser referencia a el estilo que va a contener y va a aplicar por ejemplo --Color. <br>Tambien se pueden aplicar variables en la hoja html desde el atributo style="" </p> 
+    <div class="caja-con-variables">
+        <p>Caja con variables</p>
+    </div> <br><br>
+    <h2>Funcion url()</h2>
+    <p>La funcion url no va a servir para mandar a llamar archibos tipograficas o imagenes de fondo, (Contenido externo)</p> <br> <hr> <br><br>
+    <h2>Funcion clac()</h2>
+    <p>La funcion ulr nos va a permitir usar realizar operaciones aricmeticas para signar espacios calculados y demas</p> <br> <hr> <br><br>
+    <h2>Funcion min() & max()</h2>
+    <p> Los valores min max van a aplicar a aplicar medidad dinamicas en base a un minimo o a un maximo, por ejemplo 
+        <b>height : max(200px, 25vh)</b> en este caso va a tomar el valor mas alto y lo va a aplicar como altura y va a ser dinamico a los cambios de resoluciones. Se pueden asignar mas madisas separadas por una coma 
+    </p>
+    <div class="caja-con-funcion-max">
+        <p>voy a tomar la altura maxima entre nas definidas</p>
+    </div> <br> <hr> <br><br>
+    <h2>Funcion clamp()</h2>
+    <p>Esta funcion nos va a permitir colorcar un valor minimo uno ideal y uno maximo, su resultado va a ser un contenido dinamico </p>
+    <p class="parrafo-dinamico-clamp">Soy un parrafo dinamico con la funcion clamp()</p> <br>
+    <a href="#arriba">TOP↑</a> <br><hr><br><br>
+    <h1 id="fuentes-textos">Estilo de Fuentes y Textos</h1> <br>
+    <p><b>ESTILOS DE LAS FUENTES TIPOGRAFICAS</b></p>
+    <ul>
+        <li>Font-family</li>
+        <li>Font-size</li>
+        <li>Font-weight</li>
+        <li>Font-style</li>
+        <li>Font-variant</li>
+        <li>Font</li>
+        <li>line-height</li>
+    </ul>
+
+    <p> <b>Font-weight</b> nos va a definir el grosor de la fuente (peso), va de 100 en 100 y estas van a variar depende el peso tipografico con el que fue creada </p> <br>
+--100	Thin (Hairline) <br>
+--200	Extra Light (Ultra Light) <br>
+--300	Light <br>
+--400	Normal (Regular) <br>
+--500	Medium <br>
+--600	Semi Bold (Demi Bold) <br>
+--700	Bold <br>
+--800	Extra Bold (Ultra Bold) <br>
+--900	Black (Heavy) <br>
+--950	Extra Black (Ultra Black) <br>
+<br>
+<p> <b>Font-style</b> nos va a definir el estilo de fuente </p> <br>
+--font-style: normal; <br>
+--font-style: italic;(cursiva) <br>
+--font-style: oblique; <br>
+<p> <b>Font-variant</b> va a tener dos valores uno es normal y el otro small-caps va a trasnformar los textos en mayusculas</p>
+p.normal {
+    font-variant: normal;
+  } <br>
+  p.small {
+    font-variant: small-caps;
+  } <br><br>
+<p> <b>line-height</b>  va a definir la altura de linea de un texto siendo 1 la altura normal </p> 
+    <p class="texto-line-heigt"> <b>Texto con un line-height modificado</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque recusandae, pariatur blanditiis beatae obcaecati distinctio vel officia in nisi praesentium.</p>
+
+  <p> <b>Font</b> va a se un <b>Shorthand</b> donde vamos a poder aplciar estilos de fuentes en una sola linea de comando</p>
+  <p class="texto-shorthand">Este es un texto estilizado con un el shorthand font.</p>
+  <h2>Anotacion📎 Este short va a tener un orden de aplicacion lo que lo hace dificil de recordar, el mismo esta expresado en el documento css, y entre unidades de medida se tiene que aplicar la barra / </h2> <br>
+<br><a href="#arriba">TOP↑</a>
+<br><hr><br><br>
+<h1 id="fuentes-externas">Fuentes Externas @font-face & font-display</h1> 
+<h2>Fuentes locales</h2>
+<p>-Para el navegador se utiliza un formato tipo woff o woff2 (formato habierto de tipografia para la web)</p>
+<p>Para iniciar una carga tipografica de manera local iniciamos con la propiedad @font-face y luego definimos el nombre de la fuene con font-family: ""; Luego la enlazamos con el atributo src y la funcion url src:url(""); Adicionalmente se le va a especificar dentro del mismo atruburo src el formato del archibo en este caso woff con format: ("woff"). <br>-Podemos concatenar mas de una ruta de ser necesario separadas por una coma.</p>
+<p class="chalet">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere quisquam laborum nesciunt, doloribus animi libero est nulla veniam deleniti repellat cumque? Qui nulla ea nihil deserunt praesentium esse numquam ullam.</p> <br>
+<p>-En la asignacion de la fuente con font-family especificamos la fuente con el nombre asinado entre comillas y colocamos una fuente <b>segura (ttf)</b> de respaldo</p><br>
+<p><b>EL ATRIBUTO font-display</b> nos va dejar seleccionar la manera en la que se va a cargar la fuente y sus valores son:</p> 
+<p><b>-auto - </b>utiliza el modo de carga predeterminado (block)</p>
+<p><b>-block</b>- oculta el texto hasta que la fuente cargue por completo</p>
+<p><b>-swap</b>-Indica al navegador que utilize la fuente alternativa segura hasta que la fuente personalizada cargue (<b>ESTE ES EL VALOR MAS USADO</b> )</p>
+<p><b>-fallback</b>-mezcla entre auto y swap</p>
+<p><b>-optional</b> ocultara el texto, luego lo cargara con la fuente alternativa y finalmente aplicara la fuente presonalizada</p>
+<br><br>
+<h2>Google fonts</h2>
+<p>*Verfificar que la fuente contenga mayusculas y minusculas, que sea una fuente con idioma español o ingles si el sitio lo requiere</p>
+<p>*No seleccionar mas de tres estilos ya que va a consumir mas rendimiento en la carga del sitio, los mas usados son regular 400 y bold 700</p>
+<p>*No utilizar mas de dos fuentes ya que tambien puede afectar al rendimiento y visualmente no es agradable</p>
+<p>*La manera correcta de linkear google font es con la etiqueta link a la hoja html y antes de nuestra hoja de estilos</p>
+<br><br><a href="#arriba">TOP↑</a>
+<br><hr><br><br>
+<h1 id="estilos-textos">Estilos de Textos</h1><br>
+<ol>
+<ul><b>text-aling</b></ul>
+<ul><b>text-decoration</b></ul>
+<ul><b>text-indent</b></ul>
+<ul><b>text-overflow</b></ul>
+<ul><b>text-transform</b></ul>
+<ul><b>latter-spacing</b></ul>
+<ul><b>white-space</b></ul>
+<ul><b>word-break</b></ul>
+<ul><b>word-spacing</b></ul>
+<ul><b>writing-mode</b></ul>
+</ol>
+<br>
+<h2>Text-aling</h2>
+<p>- <b>text-aling</b> tiene los siguientes valores; <b> left; right; center; y justify;</b></p>
+<h2>Text-decoration</h2>
+<p> <b>-text-decoration</b> tiene dos valores y son none; texto none y underline; <u>texto underline</u> (predeterminado para enlaces)</p>
+<h2>Text-indent</h2>
+<p> <b>-text-indent</b> lo que hace es proporcionar una sangria a la linea con la que empieza el texto, ejemplo sintaxis: text-indent: 1rem;</p>
+<h2>Text-overflow</h2>
+<p> <b>-text-overflow</b> tiene dos valores y es clip; y ellipsis; </p>
+<p> <b>clip;</b> corta el contenido sobrante no permitiendo que el texto se adapte ni modifique una caja, para que este funcione las propiedades <b>white-space: nowrap; y overflow: hidden;</b> van a ser necesarias para que se oculte el contenido sobrante y no se acomode en filas</p>
+<div class="caja-texto">
+<p class="text-overflow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti similique numquam asperiores facere adipisci laboriosam nulla tempora exercitationem error? Provident,</p>
+</div> <br>
+<p> <b> ellipsis;</b> agrega al corte unos puntos al texto para indicar que el texto continua, por ejemplo en una descripcion del sitio web indexado en el motor de busqueda de google, para que esta propiedad funcione tambien va a requerir que tenga un overflow hidden y un white-space: nowrap;</p>
+<div class="caja-texto2">
+    <p class="text-overflow2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti similique numquam asperiores facere adipisci laboriosam nulla tempora exercitationem error? Provident,</p>
+    </div> <br>
+    <h2>Text-transform</h2>
+<p>- <b>text-transform;</b> esta propiedad va a tener los siguientes valores; <b>none;</b>  (por defecto), <b>capitalize;</b> (Primer letra de lada palabra en mayuscula), <b>uppercase;</b> (todo en mayusculas) y <b>lowercase;</b> (todo en minusculas)</p>  <br>
+<p> <b>latter-spacing</b> esta propiedad va a aplicar un espaciado a cada caracter</p> <br>
+<h2>white-space</h2>
+<p>esta propiedad nos va a ofrecer la manera de modificar el comportamiento de los textos y los espacios en blanco no considerados por el html, su valor por defecto es <b>normal;</b></p>
+<ol>
+    <ul>white-space: normal;</ul>
+    <ul>white-space: nowrap;</ul>
+    <ul>white-space: pre;</ul>
+    <ul>white-space: pre-wrap;</ul>
+    <ul>white-space: pre-line;</ul>
+</ol>
+<h3>normal;</h3>
+<div class="contenedor-white-space">
+    <p class="normal">Lorem ipsum, dolor sit amet consectetur 
+        ad
+        ipisicing elit. Labore veritatis temporibus cupiditate porro? Sa
+        piente porro officia, fugit praesentium saepe accusamus, natus officiis maxime sint reiciendis maiores ipsam aliquid inventore obcaecati?</p>
+</div>
+<p><b>RESPETA SOLO UN ESPACIO Y EL TEXTO SE ACOMODA DINAMICAMENTE AL ESPACIO</b></p><br>
+<h3>nowrap;</h3>
+<div class="contenedor-white-space">
+    <p class="nowrap">Lorem ipsum, dolor sit amet consectetur 
+        ad
+        ipisicing elit. Labore veritatis temporibus cupiditate porro? Sa
+        piente porro officia, fugit praesentium saepe accusamus </p>
+</div>
+<p> <b>EL TEXTO DE ACOMODA EN UNA SOLA LINEA NO RESPETANDO EL CONTENEDOR</b></p> <br>
+<h3>pre;</h3>
+<div class="contenedor-white-space">
+    <p class="pre">Lorem ipsum, dolor sit amet consectetur 
+        ad
+        ipisicing elit. Labore veritatis temporibus cupiditate porro? Sa
+        piente porro officia, fugit praesentium saepe accusamus, natus officiis maxime sint reiciendis maiores ipsam aliquid inventore obcaecati?</p>
+</div>
+<p><b>EL TEXTO RESPETA TODOS LOS ESPACIOS EN BLANCO DE NUESTRA HOJA HTML Y NO LOS GENERA DINAMICAMENTE AL CONTENEDOR </b></p> <br>
+<h3>pre-wrap;</h3>
+<div class="contenedor-white-space">
+    <p class="pre-wrap">Lorem ipsum, dolor sit amet consectetur 
+        ad
+        ipisicing elit. Labore veritatis temporibus cupiditate porro? Sa
+        piente porro officia, fugit praesentium saepe accusamus, natus officiis maxime sint reiciendis maiores ipsam aliquid inventore o bcaecati?</p>
+</div>
+<p><b>VA A RESPETAR LOS ESPACIOS Y VA A GENERAR SALTOS DE LINEA (ESPACIOS) PARA ACOMODARSE EN EL CONTENEDOR</b></p> <br>
+<h3>pre-line;</h3>
+<div class="contenedor-white-space">
+    <p class="pre-line">Lorem ipsum, dolor sit amet consectetur 
+        ad
+        ipisicing elit. Labore veritatis temporibus cupiditate porro? Sa
+        piente porro officia,
+        fugit praesentium saepe accusamus, natus officiis maxime sint reiciendis maiores ipsam aliquid inventore o bcaecati?</p>
+</div> <br>
+<h2>word-break</h2>
+<p>word-break va a realizar un quiebre en una palabra para que esta complete el espacio del contenedor, esta propiedad tiene dos valores; <b>normal; (por defecto) y break-all;</b></p>
+<div class="contenedor-word-break">
+    <p class="texto-word-break">Lorem ipsum, dolor sit amet consectetur 
+        ad
+        ipisicing elit. Labore veritatis temporibus cupiditate porro? Sa
+        piente porro officia, fugit praesentium saepe accusamus, natus officiis maxime sint reiciendis maiores ipsam aliquid inventore o bcaecati?</p>
+</div>
+<p>Vemos como la propiedad <b>break-all;</b> rompe las palabras ajustando el texto al contenedor</p> <br>
+<h2>word-spacing</h2>
+<p>Esta propiedad aplica un espacio entre palabras </p>
+<p class="word-spacing">Este es un texto modificado con word-spacing</p> <br>
+<h2>writing-mode</h2>
+<p>Esta propiedad va a modificar el modo de escritura, su valor por defecto es <b>horizontal-tb (de izquierda a derecha )</b>, esta propiedad nos ofrece la posivilidad de tener textos en modo vertical con la valor de <b>vertical-lr o rl</b> </p>  <br>
+<a href="#arriba">TOP↑</a>
+<p class="writing-mode">Este texto esta en vertical con writing-mode </p> <br><a href="#arriba">TOP↑</a> <hr> <br> <br>
+<h1 id="border-radius">Border Radius</h1>
+<p>Con border radius podemos gene  rar bordes elipticos aplicando dos valores a un lado (x,y) desde el radio, esto nos va a permitir generar bordes mas complejos modificando los dos vertices</p> <br>
+<div class="border-radiius-eliptico"></div> <br>
+<br><a href="#arriba">TOP↑</a> <br>  <hr><br>
+<h1 id="outline">Porpiedad Outline</h1>
+<p>La propiedad outline es un aplique de borde externo <b>No perteneciente al box model</b> por ende no va a ocupar espacio de la caja. Este tampoco va a haceptar modificar el vertice donde aplicarlo </p> <br> <br>
+<div class="caja-outline">
+    
+</div> <br>
+<h2>Outline-offset:1rem; esta propiedad nos va a aplicar un espacio entre la caja y el propio outline</h2> <br><br><br>
+<div class="caja-outline-offset">
+    
+</div> <br> <br>
+
+<h2>Anotacion📎 El offset tambien se puede aplicar con valores negativos -1rem introduciendose en la caja como un elemento absoluto</h2> <br> <br><a href="#arriba">TOP↑</a> <br> <hr> <br>
+
+<h1 id="fondos">Backgrounds Propiedades</h1>
+
+<ol>
+    <li>background-attachment</li>
+    <li>background-clip</li>
+    <li>background-color</li>
+    <li>background-origin</li>
+    <li>background-position</li>
+    <li>background-repeat</li>
+    <li>background-size</li>
+    <li>background-image</li>
+    <li>background</li>
+</ol> <br>
+<h2>background-size</h2>
+<p>Especificamos dos valores referentes al valor x y al valor y como segundo, <b>Si no se especifica el valor de y este se calcula automaticamente</b> a esta propiedad se le pueden asignar dos valores <b>COVER; y CONTAIN;</b></p>
+<p> <b>-COVER;</b> esta valor <b>No va a desformar la imagen</b> y para asegurarse de cumplir con las medidas establecidas del contenedor va a expandir la imagen recortandola, como haciendo un zoom. Perdemos parte de la imagen pero esta no se desforma.</p>
+<div class="caja caja-cover"></div>
+
+<p> <b>-Contain;</b> cambia la imagen de fondo para que esta se muestre en su totalidad</p> 
+<div class="caja caja-contain"></div>
+<br>
+<h2>background-position</h2>
+<p>-Define la posicion de la imagen de fondo, dentro de la caja podemos definir donde queremos que empieze la imagen de fondo y este se modicia tanto en el eje X como en el eje Y,  podemos usar direcciones reservadas o unidades de medida</p>
+<div class="caja caja-position"></div> <br>
+<h2>background-clip;</h2>
+<p>-Define cuanto va a extenderse el background aplicado a el elemento, esta propiedad aplica mas para los colores de fondo y tiene tres valores;</p>
+<p><b>:border-box; (por defecto)</b> se pinta desde el borde</p>
+<div class="caja caja-clip-box"></div>
+<p><b>:padding-box;</b> se pinta desde el padding</p>
+<div class="caja caja-clip-padding"></div>
+<p><b>:content-box;</b> se pinta desde el contenido </p>
+<div class="caja caja-clip-content"></div> <br>
+<h2>background-origin</h2>
+<p>-Define hasta donde va a extenderse la imagen de fondo del elemento, su valor por defecto es <b>padding-box;</b></p>
+<p><b>-padding-box;</b></p>
+<div class="caja caja-origin-padding"></div>
+<p><b>-border-box;</b></p>
+<div class="caja caja-origin-border"></div>
+<p><b>-content-box con padding;</b></p>
+<div class="caja caja-origin-content"></div>
+<p>Al comenzar la imagen desde el contenido respeta el padding de 2 rem</p> <br>
+<h2>background-attachment</h2>
+<p>Esta propiedad no da la posivilidad de dejar la imagen de fondo fixed dentro de su caja. Tiene dos valores <b>scroll; (por defecto)</b> y <b>fixed;</b></p>
+<br><a href="#arriba">TOP↑</a>
+<div class="caja caja-attachment"></div> <br>
+<h2>background</h2>
+<p>Este es un shorthand con orden de aplicacion, la cual es;</p>
+<ol>
+    <li>background-image</li>
+    <li>background-position</li>
+    <li>background-size</li>
+    <li>background-repeat</li>
+    <li>background-origin</li>
+    <li>background-clip</li>
+    <li>background-attachment</li>
+    <li>background-color</li>
+</ol>
+<h2>Anotacion📎 Este shorthand se utiliza solamente como unico aplique de background.</h2> <br>
+<br><a href="#arriba">TOP↑</a> <hr><br><br>
+<h1 id="fondos-multiples">Fondos Multiples</h1>
+<p>Podemos cargar varias imagenes con background-image, estas van a tener que estar separadas con una coma y su orden en el contenedor va a ser inherente a su poscicion denominada en la hoja de estilos. Al aplicarle estilos a estas (background) estos tambien van a tener el mismo orden separados por una coma</p>
+<div class="fondos-multiples">
+
+</div>
+<h2>Con este efecto de multiples imagenes podemos montar una imagen transparende por encima de otra imagen, logrando que estas se fusionen</h2>
+<p>Fondos multiples con shorthand (background)</p>
+<div class="multiples-short"></div>
+<br>
+<br><a href="#arriba">TOP↑</a> <hr><br><br>
+<h1 id="estilo-imagenes">Estilo de Imagenes</h1>
+<h2>Imagenes responsivas</h2>
+<p>Para hacer una imagen (display-inline) responsiva podemos aplicar un <b>max-width: 100%; y un heigth:auto;</b>. Estas propiedades tambien las podemos usar como reseteo de imagenes</p> <br>
+<img src="./puesta-sol.jpg" alt="puesta-sol">
+<br> 
+<h2>Imagenes con tamaños especificos</h2> <br>
+<p>Cuando tenemos un contenedor con medidas a las cuales nuestra imagen no se puede adaptar sin deformrse, podemos usar dos propiedades <b>Objet-fit y Objet-position</b> estas dos trabajan parecido como a background-size y background-position pero con la etiqueta img</p> <br>
+<h2>Object-fit</h2>
+<ol>
+    <li>object-fit:contain;</li>
+    <li>object-fit:cover;</li>
+    <li>object-fit:fill; (<b>por defecto</b>)</li>
+    <li>object-fit:none;</li>
+    <li>object-fit:scale-down;</li>
+</ol>
+<p><b>-Objet-fit-fill;</b> este valor (por defecto) <b>va a desformar</b> la imagen para ajustarse a las medidas establecidas</p>
+<div class="card-img card-img-fill">
+    <img src="./puesta-sol.jpg" alt="">
+    <h4>Puesta de sol</h4>
+</div> <br>
+<p><b>-objet-fit-cover;</b> esta valor <b>No va a desformar la imagen</b> y para asegurarse de cumplir con las medidas establecidas va a expandir la imagen recortandola, como haciendo un zoom. Perdemos parte de la imagen pero esta no se desforma. Al recortarse se habilita la segunda propiedad <b>Object-position</b> con ella definimos la posicion de la imagen visible</p> 
+<div class="card-img card-img-cover">
+    <img src="./puesta-sol.jpg" alt="">
+    <h4>Puesta de sol</h4>
+</div> <br>
+<h2>Object-position</h2>
+<p> Por defecto al aplicarle un <b>object-cover</b> la parte visible va a ser el centro, para modificar esto usamos <b>object-position</b> y usamos esta propiedad como background-position (medidas reservadas y unidades de medida)</p>
+<div class="card-img card-img-cover--position">
+    <img src="./puesta-sol.jpg" alt="">
+    <h4>Puesta de sol</h4>
+</div> <br>
+<h2><b>Object-fit: contain; </b></h2>
+<p>Este valor no va a respetar las dimensiones asignadas a la imagen ya que este va a desformar la imagen para asegurarse de que se adapte a su contenedor</p>
+<div class="card-img card-img-contain">
+    <img src="./puesta-sol.jpg" alt="">
+    <h4>Puesta de sol</h4>
+</div> <br>
+<h2>Object-fit:none;</h2>
+<p>Este valor va a trabajar como cover pero sin modificar su tamaño, va a mostrar en este ejemplo los 300 px asignados en la parte de la imagen que se le asigne con object-position.</p>
+<div class="card-img card-img-none">
+    <img src="./puesta-sol.jpg" alt="">
+    <h4>Puesta de sol</h4>
+</div> <br>
+<h2>Object-position: scale-down;</h2>
+<p>Este valor toma el menor de los valores que tenga contain y none</p>
+<br>
+<br><a href="#arriba">Top↑</a> <hr><br><br>
+<h1 id="estilo-listas">Imagenes como viñetas usando ::before</h1>
+<ol class="lista">
+    <li>Hola mundo</li>
+    <li>Hola mundo</li>
+    <li>Hola mundo</li>
+</ol>
+<br>
+<br><a href="#arriba">Top↑</a> <hr><br><br>
+<h1 id="list-style">Estilo de Listas</h1>
+<h2>-List-style;</h2>
+<p>Shorthand para los estilos y van en este orden <b> list-style-type;  / list-style-image;  / list-style-position;</b></p>
+<br>
+<br><a href="#arriba">Top↑</a> <hr><br><br>
+<h1 id="list-colum">Listas y Parrafos en Columnas</h1>
+<div class="contenedor-lista">
+    <ol class="lista-columna">
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+        <li>Hola Mundo</li>
+    </ol>
+</div>
+<h2>La propiedad column-count: ; nos va a generar un margen entre columnas no asi en los parrafos, su funcionalidad esta sujeta al tamaño del contenedor</h2>
+<br>
+<br><a href="#arriba">Top↑</a> <hr><br><br>
+<h1 id="estilo-formularios">Formulario Css</h1> <br>
+<form class="contact-form" action="https://formsubmit.co/ su@email.com" method="POST" requiered>
+    <input  type="text" name="nombre" placeholder="Escriba su nombre" pattern="[a-z]" 
+    title="Nombre solo acepta letras y espacios en blanco" required>
+    <input type="email" name="correo" placeholder="Escriba su correo" pattern="[a-z @]" title="Formato de correo valido" required><!-- Repasar html -->
+    <textarea name="texto" id="" cols="10" rows="1" placeholder="Indique su consulta" required></textarea>
+    <input type="submit" name="" id="textarea">
+</form>
+
+
+<br>
+<br><a href="#arriba">Top↑</a> <hr><br><br>
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="flex.css">
+</head>
+<body>
+    <h1 id="arriba">Temario</h1>
+    <div class="temario-grid">
+        <ol class="columna1">
+            <h2>Propiedades para el padre</h2>
+            <li><a href="#inline-flex">Inline Flex</a></li>
+            <li><a href="#nowrap">Comportamiento nowrap</a></li>
+            <li><a href="#flex-flow">Flex-flow</a></li>
+            <li><a href="#justify-content">Justify-content (Main Axis)</a></li>
+            <li><a href="#croos-axis">Alineacion en eje transverzal o sobrante (Cross Axis)</a>  </li>
+        </ol>
+        <ol class="columna2">    
+            <h2>Propiedades para los hijos</h2>
+            <li><a href="#flex-grow">Factor de crecimiento Flex-grow</a></li>
+            <li><a href="#flex-shrink">Factor de Reduccion Flex-shrink</a></li>
+            <li><a href="#flex-basis">Flex-basis</a></li>
+            <li><a href="#flex-shorthand">Shorthand flex para (grow shrink y basis)</a></li>
+            <li><a href="#orden-alineacion"> Orden y Alineación de hijos ( order y align-self )</a></li>
+        </ol>
+        <ol>
+            <h2>Casos Practicos</h2>
+            <li><a href="#grid-responsive">Grid-Responsive sin Media Query</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ol>
+    </div>
+
+    <br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<br>
+<h1 id="inline-flex">Inline-Flex</h1>
+<p>Inline-flex nos transforma la caja contenedora flex a una caja en linea pudiendo asi posicionar varias cajas flexbox a su lado</p>
+<div class="contenedor inline">
+    <div class="hijo" >caja1</div>
+    <div class="hijo">caja2</div>
+</div>
+<div class="contenedor inline">
+    <div class="hijo" >caja1</div>
+    <div class="hijo">caja2</div>
+</div>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="nowrap">Comportamiento nowrap</h1> 
+<p>El comportamiento nowrap (por defecto) va a intentar mantener una linea en sus hijos, tal asi que ignora el tamaño asignado a cada hijo si estos no pueden mantener la misma linea (nowrap). vemos un ejemplo en el siguiente contenedor donde las cajas hijas tienen un ancho del  50% ignorado por esta propiedad</p>
+<div class="contenedor cont-nowrap">
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap">caja2</div>
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap" >caja1</div>
+    <div class="hijo nowrap" >caja1</div>
+</div>
+<p>A medida que se le asigne mas tamaño al contenendor padre estas cajas con un ancho del 50% van a ir agrandandose para lograr el tamaño asignado
+</p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="flex-flow">Flex-flow</h1>
+<p><b>Flex-direction y Flex-wrap</b> se conocen como el flujo del contenido dentro de la caja, y para estas dos propiedades tenemos un shorthad llamado <b>Flex-flow</b> primero le asignamos la direccion y despues el wrap. Sintaxis; <b>flex-flow: column nowrap;</b></p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="justify-content">Justify-content (anotaciones)</h1>
+<p>Justify-content va a modificar a los hijos <b>en el eje principal</b> si este es row(por defecto) va a modificar los elementos horizontalmente y si los elementos estan con flex-direction:column; al cambiar el eje principal a vertical los modificar ane este sentido, <b>siempre cuando tenga el espacio para hacerlo, ya que esta propiedad no va a generar saltos de linea, agrandamiento del contenedor padre ni desbordamiento</b> </p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="croos-axis">Alineacion en eje transversal o sobrante (Cross Axis)</h1>
+<p>Dependiendo del flex-direcion que tenga el elemento contenedor definimos el eje X o Y (x por defecto), como principal (main axis) y el eje sobrante transversal va a ser denominado como <b>cross axis.</b> Si para el eje principal usamos Justify-content para el sobrante usamos; <b> align-items y align-content</b>
+    <p><b>Align-items;</b> Usamos esta propiedad para alinear los hijos cuando tenemos una sola fila (nowrap)</p>
+    <p><b>Align-content;</b> Usamos esta propiedad para alinear los elementos hijos cuando tengamos mas de una fila o que este activo el valor de (wrap) de lo contrario la propiedad no funciona</p>
+</p>
+<h2>Align-items</h2>
+<p>Con esta propiedad alineamos a los hijos en el eje no principal en cada linea, su valor por defecto es <b>stretch</b>, este valor va a estirar los hijos para cubrir todo el contenendor en eje sobrante siemrpe y cuando los hijos no tengan una medida establecida en este eje</p>
+<div class="cross-axis">
+    <div class="cross-hijo">por defecto</div>
+    <div class="cross-hijo">por defecto</div>
+    <div class="cross-hijo">por defecto</div>
+    <div class="cross-hijo">por defecto</div>
+</div>
+<p>Este valor por defecto <b>stretch</b>, no va a aplicarse cuando tengamos en este ejemplo una medida asignada a cada hijo (medida del hijo en direccion del cross axis)</p>
+<div class="cross-axis flex-start">
+    <div class="cross-hijo hijo-start">por defecto</div>
+    <div class="cross-hijo hijo-start">por defecto</div>
+    <div class="cross-hijo hijo-start">por defecto</div>
+    <div class="cross-hijo hijo-start">por defecto</div>
+</div>
+<p>vemos en este caso que al tener una altura definida en los hijos ya no tenemos mas el valor de <b>stretch</b>, si no <b>flex-start</b></p>
+<h2> align-items con eje x de cross axis</h2>
+<div class="cross-axis padre-x">
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+    <div class="cross-hijo cross-x">por defecto</div>
+</div>
+<p>En es cuadro anterior vemos como ahora con un direction column, el cross axis pasa a ser el eje x y estos por defecto tienen un align items stretch y se rellena el contenedor</p>
+<br>
+<div class="cont">
+    <p class="cont__hijo">Lorem ipsum dollalalalalalalaor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dollalalalalalalaor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dollalalalalalalaor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dollalalalalalalaor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dollalalalalalalaor sit amet.</p>
+  </div> <!--  <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+    <p class="cont__hijo">Lorem ipsum dolor sit amet.</p>
+     -->
+  <h2>Align-content:</h2>
+  <p>Va a funcionar con varias lineas y utiliza los mismos valores que align-items</p>  <br>
+  <p>Ejemplo de un contenedor con eje principal Y con sus hijos stretch</p>
+
+  <div class="contenedor2">
+    <div class="hijo22"><p>Lorem, ipsum dolor.</p></div>
+    <div class="hijo22"><p>Lorem, ipsum dolor.</p></div>
+    <div class="hijo22"><p>Lorem, ipsum dolor.</p></div>
+    <div class="hijo22"><p>Lorem, ipsum dolor.</p></div>
+    <div class="hijo22"><p>Lorem, ipsum dolor.</p></div>
+  </div>
+  <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+    <h1 id="flex-grow">Factor de crecimiento Flex-grow</h1>
+    <p>Cuando la caja flexbox (padre) tenga espacio sobrante, con <b>flex-grow</b> podemos asignar ese espacio al crecimiento de los hijos. Su valor por defecto es 0. Aun que el hijo tenga medidas asignadas estos creceran siguendo la regla indicada.
+    El crecimientro siempre va a ser en base a lo que le sobra al contenedor.
+    En el siguente cuadro le aplicamos un factor de crecimiento de 1 a todos los hijos</p>
+    <div class="contenedor-grow">
+        <div class="grow-hijo"><p>Lorem ipsum</p></div>
+        <div class="grow-hijo"><p>Lorem ipsum</p></div>
+        <div class="grow-hijo"><p>Lorem ipsum</p></div>
+    </div>
+<p>En el siguente cuadro le aplicamos el factor de crecimiento solo a un hijo</p>
+<div class="contenedor-grow">
+    <div class="grow-hijo"><p>Lorem ipsum</p></div>
+    <div class="grow-hijo"><p>Lorem ipsum</p></div>
+    <div class="grow-hijo crecimiento"><p>Lorem ipsum</p></div>
+</div>
+<p>En el cuadro anterior vemos como los tres hijos teienen un factor de crecimiento de 1, pero el trecero tiene un factor de 4, asignandole 3 veces mas espacio sobrante que a los hijos anteriores</p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+
+<h1 id="flex-shrink">Factor de Reduccion</h1>
+<h2>Flex-shrink</h2>
+<p>Al igual que flex-grow esta propiedad se modifica con <b>1 y 0</b> lo que seria como positivo y negativo, en Flex-shrink <b>el valor por defecto es 1</b> dando la posibilidad a el encojimiento automatico responsivo. Esto quiere decir que por defecto los contenedores hijos se van a encojer automaticamente para ajustarse al contenedor padre si este se va achicando. Si tenemos el <b>flex-shrink en 0 los hijos no van a encojerse y al achicar la caja responsivamente estos van a quedar igual generando un scroll</b></p>
+<h2>Anotacion!! para que esta propiedad funcione los hijos deben tener <b>UN ANCHO ESTABLECIDO EN PX REM EM</b> % y vw no funcionara, y el contendido dentro del hijo debe ser 100% responsivo, </h2>
+<div class="cont-shrink">
+    <div class="hijo-shrink"><p>lorem</p></div>
+    <div class="hijo-shrink cmd"><p>lorem</p></div>
+    <div class="hijo-shrink"><p>lorem</p></div>
+</div>
+<p>Achicar el cuadro anterior para ver los resultados</p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+<h1 id="flex-basis">Flex-basis</h1>
+<p>Es el tamaño del <b>hijo</b> en la linea main axis (width por defecto) su valor por defecto es <b>auto y seria lo que tengas de contenido.</b> <br>En ROW seria flex basis seria su <b>ancho</b> y en COLUMN su basis es la <b>altura</b></p>
+<p>Su valor por defecto es <b>auto</b> y significa que su tamaño se ajusta al contenido, esta propiedad tiene <b>mayor especificidad que una asignacion de ancho o alto normal, </b>lo que va a hacer que no respete las cascadas y si tiene un flex-basis este va a ser el aplicado</p>
+<div class="cont-basis">
+    <div class="hijo-basis">200px</div>
+    <div class="hijo-basis">200px</div>
+    <div class="hijo-basis">200px</div>
+</div>
+<h2>Anotacion el flex basis va a asignar un ancho responsivo, es decir al tener un flex-basis: 200px; como en el cuadro anterior, estas medidas se van a ser maximas achicandose a medida que se achica en contenedor padre (no asigna un valor minimo</h2>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+<h1 id="flex-shorthand">Shorthand flex para (grow shrink y basis)</h1>
+<p>Es un shorthand de las propiedades flex-grow, flex-shrink y flex-basis, en este orden</p>
+<div class="cont-flex">
+    <div class="hijo-flex">shorthand</div>
+    <div class="hijo-flex">shorthand</div>
+    <div class="hijo-flex">shorthand</div>
+</div>
+<p>En el cuadro anteriro aplicamos el shorthan flex con un <b>grow 0 </b> para que no tomen el espacio sobrante, un <b>shrink 1</b> para que se reduzcan y proporcionalmente, y un <b>basis</b> de 150px para asignar el ancho</p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+<h1 id="orden-alineacion">Orden y Alineación de hijos ( order y align-self )</h1>
+<h2>Order</h2>
+<p>La propiedad order nos da la posibilidad de modificar la posicion de cada hijo en el orden principal (main axis) del contenedor, siendo este por defecto fila (row). Acepta valores negativos y por <b>defecto su valor es 0</b> en el siguiente cuadro vemos al <b>hijo 2 con un valor de 1</b> el cual es mayor que 0 por lo que se pone al final,</p>
+
+<div class="cont-order">
+    <div class="hijo-order">hijo 1</div>
+    <div class="hijo-order">hijo 2</div>
+    <div class="hijo-order">hijo 3</div>
+    <div class="hijo-order">hijo 4</div>
+</div>
+<h2>Anotaciones! el menor valor siempre va a estar antes que el valor mayor</h2>
+<br>
+<h2>Align-self</h2>
+<p>Align-self se utiliza para modificar posicionamientos en hijos especificos en el eje transverzal, es decir si nuestro eje principar el row (fila), con align-self vamos a poder modificar cualquier hijo en el eje sobrante. Sus valores son: <b>stretch - flex-start - flex-end - center - baseline</b> siendo <b>stretch </b>0</p>
+<div class="cont-self">
+    <div class="hijo-self">hola</div>
+    <div class="hijo-self">hola</div>
+    <div class="hijo-self">modi</div>
+</div>
+<p>En el cuadro anterior vemos al hijo 3 modificado con el valor de flex-end corriendo al final al mismo sobre el eje sobrante</p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
+
+<h1 id="grid-responsive">Grid Responsive sin Media Query</h1>
+<div class="coontenedor">
+    <section class="coonetenedor__flex">
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+        <article class="article-flex">item 20</article>
+    </section>
+</div>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+ 
+</body>
+</html>

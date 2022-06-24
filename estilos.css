@@ -1,0 +1,697 @@
+html{
+    box-sizing: border-box
+}
+*, *::after, *::before{
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+.temario-grid{
+    width: 100%;
+    background-color: limegreen;
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-areas: 
+    "col1 col2 col3 col4";
+}
+.columna1{
+    grid-area: col1;
+}
+.columna2{
+    grid-area: col2;
+}
+.columna3{
+    grid-area: col3;
+}
+.columna4{
+    grid-area: col4;
+}
+
+#arriba{
+    font-size: 50px;
+    text-align: center;
+    background-color: bisque;
+}
+.ul-temario{
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+    color: black;
+}
+.ul-temario *{
+    color: rgb(39, 68, 163);
+}
+
+h1{
+    background-color: aqua;
+    border: 3px solid black;
+    font-size: 30px;
+    text-align: center;
+    
+}
+h2{
+    background-color: aquamarine;
+    border: 1px solid black;
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+hr{
+    
+    height: 5px;
+    background-color: black;
+    margin-bottom: 3rem;
+    color: black;
+}
+/* GENERALES */
+
+/* pseudoclases de form */
+.seudoclases *:required{
+    border-color: yellow;
+}
+.mocos:required{
+    border-radius: 12px;
+}
+.mocos:valid{
+    background-color: green;
+}
+
+/* seudoclases de enlaces */
+.menu-pseudoclases a:hover{
+    color: aqua;
+}
+.menu-pseudoclases a:visited{
+    color: rgb(0, 163, 46);
+}
+
+/* pseudoclases por posicion de elementos en contenedor */
+.pseudoclases__posicion li:first-child{
+    color: aqua;
+}
+.pseudoclases__posicion li:nth-child(4){
+    background-color: blueviolet;
+}
+.pseudoclases__posicion li:nth-child(3n +1){
+    border: 1px solid red;
+    font-weight: bold;
+}
+.pseudoclases__posicion li:nth-child(even){
+    font-size: 30px;
+}
+.articulo p:first-of-type{
+    background-color: brown;
+}
+.articulo p:last-of-type{
+    background-color: aquamarine;
+}
+.articulo p:nth-of-type(2){
+    font-weight: 600;
+}
+
+/* pseudoelementos */
+.elemento1::after{
+    content: "me cocine marcela";
+    background-color: aqua;
+}
+.elemento2::after{
+    content: "despues lave los platos";
+    background-color: aqua;
+}
+.elemento3::after{
+    content: "jaja na mentira maldita feminazi😁";
+}
+
+.pseudoelementos::first-letter{
+    font-weight: bold;
+    font-size: 32px;
+}
+.pseudoelementos::first-line{
+    color: blueviolet;
+}
+
+.pseudoelementos-selection::selection{
+    background-color: blue;
+    color: brown;
+}
+
+/* Display */
+.caja-bloque{
+    width: 10rem;
+    height: 5rem;
+    border: 1px solid black;
+    background-color: brown;
+    margin-bottom: 2rem;
+}
+.caja-linea{
+    /* width: 100rem;
+    height: 5rem; */
+    border: 1px solid black;
+    background-color: brown;
+    padding: 4rem; /* las cajas de linea aceptan paddin pero este no va a respetar los demas elementos en el espacio que se le asigne en el padding */
+    margin: 3rem;
+}
+
+/* Propiedad Visibility */
+.visibility{
+    visibility: hidden;
+    visibility: visible;
+}
+
+/* Propiedad Overflow */
+.overflow-visible{
+    width: 300px;
+    height: 100px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    
+}
+.overflow-hidden{
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    background-color: aquamarine;
+    border: 1px solid black;
+}
+.overflow-scroll{
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    overflow: scroll;
+    background-color: aquamarine;
+}
+.overflow-auto{
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+    background-color: aquamarine;
+}
+
+/* border-box */
+.tamaño-caja{
+    background-color: burlywood;
+}
+.content-box{
+    width: 500px;
+    height: 60px;
+    background-color: aquamarine;
+    padding: 10px;
+}
+.content-box p{
+    padding: 20px;
+}
+.border-box{
+    box-sizing: border-box;
+    width: 500px;
+    height: 60px;
+    background-color: aquamarine;
+    padding: 20px ;
+    border: 5px solid black;  
+}
+.border-box-padding{
+    box-sizing: border-box;
+    width: 500px;
+    height: 60px;
+    background-color: aquamarine; 
+}
+.border-box-padding p{
+    padding: 15px;
+}
+
+/* Colapso de margenes verticales */
+.colapso-padre{
+    width: 600px;
+    height: 15rem;
+    border: 3px solid black;
+}
+.colapso{
+    border: 5px solid black;
+    width: 200px;
+    background-color: coral;
+    margin-bottom: 5rem;
+    margin-top: 5rem;   
+}
+
+/* centrado de cajas */
+.caja-centrada{
+    width: 10rem;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+}
+
+/* posicionamiento */
+.relative{
+    width: 50%;
+    background-color: brown;
+    position: relative;
+    top: 30px;
+    left: 100px;
+}
+.absolute{
+    color: rgb(12, 14, 14);
+    font-size: 20px;
+    position: absolute;
+    /* top: 0; */ /* al no tener un padre relativo se acomodaria arriba de todo superponiendose en el header */
+}
+.caja-fixed{
+    background-color: rgb(202, 162, 114);
+    width: 500px;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.header-fixed{
+    width: 100%;
+    height: 7rem;
+    background-color: aqua;
+    position: fixed;
+    top: 0;
+}
+.p{
+    margin-top: 7rem;
+}
+
+.caja-sticky-padre{
+    width: 100%;
+    height: 50vh; /* El contenedor pegajoso va a serlo hasta que esta caja padre de 50vh se termine */
+}
+.caja-sticky{
+    background-color: aqua;
+    width: 200px;
+    position: sticky;
+    top: 0;
+    margin-left: 600px;
+}
+
+/* Z-Index */
+.caja-z-index-1, .caja-z-index-2{
+    width: 200px;
+    height: 100px;
+    background-color: chartreuse;
+    border: 1px solid black;
+    position: relative;
+    
+}
+.caja-z-index-1{
+    top: 80px;
+    z-index: 1;
+}
+.padre-z-index{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    z-index: 2; /* esto no esta aplicando ya que este es static */
+}
+.hijo-z-index{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    position: relative;
+    z-index: -1;
+    top: 150px;
+    left: 75px;   
+}
+
+/* opacity */
+.opacidad{
+    border: 4px solid black;
+    background-color: blueviolet;
+    opacity: 0.50;
+}
+
+/* Unidad de medida ch */
+.ch{
+    background-color: aqua;
+    width: 7ch;
+}
+.ch2{
+    font-size: 32px;
+    background-color: aqua;
+    width: 7ch;
+}
+
+/* Variables */
+:root{
+ --color-primario: green;  
+ --borde-estilo1: 10px solid black;  
+ --fuente-1: 40px;
+}
+.caja-con-variables{
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--color-primario);
+    border: var(--borde-estilo1);
+}
+.caja-con-variables p{
+    font-size: var(--fuente-1);
+}
+
+
+/* Funcion min max */
+.caja-con-funcion-max{
+    background-color: aqua;
+    width: 30rem;   
+    height: max(200px, 50vh); /* Se pueden aplicar mas medidas separadas por una coma */
+}
+.parrafo-dinamico-clamp{
+    font-size: clamp(1px, 2rem + 3vw, 3rem);
+    background-color: var(--color-primario);
+}
+
+
+/* estilos de fuentes */
+.texto-line-heigt{
+    font-size: 24px;
+    line-height: 2;
+    background-color: brown
+}
+.texto-shorthand{
+    font: italic small-caps bold 33px / 1.5 monospace;
+}
+
+
+/* Fuentes externas */
+@font-face{
+    font-family: "chalet";
+    src: url(./pruevas/Chalet.woff) format("woff"); /* se pueden concatenar mas rutas separadas con una coma */
+    /* src: url(./pruevas/Chalet.woff) format("woff");,
+    src: url(./pruevas/Chalet.woff) format("woff2"); */
+    font-display: swap;
+}
+.chalet{
+    font-family: "chalet", sans-serif;
+}
+
+
+/* Estilos de textos */
+.caja-texto{
+    width: 20%;
+}
+.text-overflow{
+    background-color: aquamarine;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.caja-texto2{
+    width: 20%;
+}
+.text-overflow2{
+    background-color: aquamarine;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+.contenedor-white-space{
+    width: 70%;
+    border: 1px solid black;
+}
+.normal{
+    white-space: normal;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.pre{
+    white-space: pre;
+}
+.pre-wrap{
+    white-space: pre-wrap;
+}
+.pre-line{
+    white-space: pre-line;
+}
+
+.contenedor-word-break{
+    width: 60%;
+    border: 2px double black;
+}
+.texto-word-break{
+    word-break: break-all;
+}
+
+.word-spacing{
+    font-size: 2rem;
+    word-spacing: 1rem;
+}
+
+.writing-mode{
+    writing-mode: vertical-lr;
+}
+
+
+/* border radius */
+.border-radiius-eliptico{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px / 200px;
+}
+
+
+/* Outline */
+.caja-outline{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    margin: auto;
+    outline: 20px solid greenyellow;
+}
+.caja-outline-offset{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    margin: auto;
+    outline: 20px solid greenyellow;
+    outline-offset: 1.5rem;
+}
+
+
+/* backgrounds */
+.caja{
+    margin: 2rem auto;
+    width: 300px;
+    height: 300px;
+    border: thick dashed red;
+}
+.caja-cover{
+    background-image: url(./puesta-sol.jpg);
+    background-size:cover ;
+    background-position: left top;
+}
+.caja-contain{
+    background-image: url(./puesta-sol.jpg);
+    background-size:contain ;
+}
+.caja-position{
+    background-image: url(./puesta-sol.jpg);
+    background-size:100px ;
+    background-repeat: no-repeat;
+    /* background-position-x: 50%;
+    background-position-y:50% ; */
+    /* background-position: bottom left; */
+    background-position: 50%; /* si solo se proporciona un valor el segundo valor se colola en a la mitad(se centra) */
+}
+.caja-clip-box{
+    background-image: url(./puesta-sol.jpg);
+    background-color: aquamarine;
+    background-size:100px ;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.caja-clip-padding{
+    background-image: url(./puesta-sol.jpg);
+    background-color: aquamarine;
+    background-size:100px ;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    
+}
+.caja-clip-content{
+    background-image: url(./puesta-sol.jpg);
+    background-color: aquamarine;
+    background-size:100px ;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    padding: 1rem;
+}
+.caja-origin-padding{
+    background-image: url(./puesta-sol.jpg);
+    background-color: aquamarine;
+    background-size:100px ;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+.caja-origin-border{
+    background-image: url(./puesta-sol.jpg);
+    background-color: aquamarine;
+    background-size:100px ;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.caja-origin-content{
+    background-image: url(./puesta-sol.jpg);
+    background-color: aquamarine;
+    background-size:100px ;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    padding: 2rem;
+}
+.caja-attachment{
+    width: 80%;
+    height: 100vh;
+    background-image: url(./puesta-sol.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+
+/* Fondos multiples */
+.fondos-multiples{
+    border: 5px dashed red;
+    width: 80%;
+    height: 30vh;
+    background-image: url("./favicon.png"),url("./puesta-sol.jpg");
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.multiples-short{
+    width: 100%;
+    height: 700px;
+    background: url(./arbol.png) no-repeat center bottom, url(./aves.png) no-repeat center bottom, url(./cielo.png) no-repeat center top;
+}
+
+
+
+/* Estilo de imagenes */
+img{
+    max-width: 100%;
+}
+
+.card-img{
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+}
+.card-img-fill img{
+    height: 300px;
+}
+
+.card-img-cover img{
+    height: 300px;
+    object-fit: cover;
+}
+.card-img-cover--position img{
+    height: 300px;
+    object-fit: cover;
+    object-position: left top;
+}
+.card-img-contain img{
+    height: 300px;
+    object-fit: contain;
+    object-position: left top;
+}
+.card-img-none img{
+    height: 300px;
+    object-fit: none;
+    object-position: left center;
+}
+
+
+
+
+/* viñetas con imagenes */
+
+.lista li{
+    list-style-type: none;
+}
+.lista li::before{
+    content:"";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("favicon.png");
+    background-size: contain;
+}
+
+
+
+/* Listas y parrafos en columnas */
+.contenedor-lista{
+    width: 100%;
+}
+.lista-columna{
+    column-count: 4;
+    column-gap: 15px; /* separacion de la barra divisoria con la lista */ 
+    column-rule: 1px solid red; 
+    column-width: 200px; /* a menos de 200px se seshacen las columnas (valor minimo aceptable)*/
+    list-style-position: inside; /* viñetas por fuera del contenido de las listas */
+}
+
+
+
+
+/* formulario */
+.contact-form{
+    --form-text-color: #666;
+    --form-success-color: #4caf50;
+    --form-error-color: #f44336;
+    --form-bg-color: #eee;
+    --form-bd-color: rgb(148, 54, 54);
+    background-color: var(--form-bg-color);
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--form-bd-color);
+    padding: 1.5rem;
+
+}
+.contact-form > * {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding: 1.5rem; /* elementos dentro del form */
+    border-radius: 12px;
+    color: var(--form-text-color);
+}
+.contact-form > *::placeholder{
+    color: red;
+}
+.contact-form input[type="submit"]{
+    margin-bottom: 0;
+    width: 50%;
+    margin-left:auto ;
+    margin-right: auto;
+}
+.contact-form input[type="submit"]:hover{
+    cursor: pointer; /* poner manito en cursor enlace */
+    opacity: 75%;
+}
+.contact-form textarea{
+    resize: none;
+}
+/* validaciones del form */
+.contact-form > *[required]:invalid{
+   border: thin solid var(--form-error-color);  
+} 
+.contact-form > *[required]:valid{
+    border: thin solid var(--form-success-color);
+}
+
+
+/* ******************** Efectos y Movimientos ********************/
