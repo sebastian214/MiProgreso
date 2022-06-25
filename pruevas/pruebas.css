@@ -13,6 +13,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-content: center;
+    background-image: linear-gradient(180deg, #EDDFB3 30%, #B09B71 70%);
 }
 .header__logo{
     flex-basis: 25%;
@@ -49,20 +50,48 @@ header{
 }
 
 
-
-
-/* Grid-responsive */
-.coontenedor{
-    max-width: 1200px;
-    margin: auto;
-}
-.coontenedor__flex{
+.contenedor{
+    width: 25rem;
+    height: 35rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #272727;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    position: relative;
 }
-.article-flex{
-    flex-basis: 10rem;
-    border: 1px solid red;
+.contenedor__video{
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.contenedor__video video{
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.contenedor__nav{
+    width: 100%;
+    height: 100%;
+    background-color: #272727;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    
+}
+
+.fa-download{
+    color: rgb(243, 243, 243);
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 45%;
 }
 
 
@@ -70,11 +99,21 @@ header{
 
 
 
+@font-face{
+    font-family: "chalet";
+    src: url(./Smooch-Regular.woff) format("woff");
+    font-display: swap;
+}
 
 
-
-
-
+.contenedor2 h1{
+    font-family: "chalet" ;
+}
+.contenedor2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #EDDFB3 30%, #B09B71 70%);
+}
 
 
 
