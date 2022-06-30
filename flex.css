@@ -270,3 +270,38 @@ width: 20%;
 .body__flex__main{
     flex-grow: 1;
 }
+
+
+
+
+
+
+/* Header-responsiv@ */
+.header_contenedor{
+max-width: 100%;
+margin-left:auto ;
+margin-right: auto;
+text-align: center;
+}
+.header__contenedor__p{
+    font-size: 2rem;
+}
+.header__contenedor__nav__ul{
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+@media screen and (min-width: 321px) {
+    .header_contenedor{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__contenedor__nav__ul{
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+    }
+}
+
