@@ -104,16 +104,17 @@ header{
     src: url(./Smooch-Regular.woff) format("woff");
     font-display: swap;
 }
-
-
-.contenedor2 h1{
-    font-family: "chalet" ;
-}
 .contenedor2{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(180deg, #EDDFB3 30%, #B09B71 70%);
+    display: flex;
 }
+.contenedor2 h1{
+    font-family: "chalet", sans-serif;
+    font-size: 24vw;
+}
+
 
 
 
