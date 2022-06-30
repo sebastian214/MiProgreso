@@ -694,4 +694,35 @@ img{
 }
 
 
+
+
+
+
+/*Hero Image con Transparencia y Texto Centrado  */
+.hero-img-flex{
+    height: 90vh;
+    background-image: url(./puesta-sol.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.hero-img-text{
+    color: white;
+    height: inherit;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-img-text p{
+    font-size: 3rem;
+    margin: 0;   /* reseteamos el margin por defecto para lograr el centrado perfecto */
+    letter-spacing: 8px;
+} 
+
+
+
+
+
+
 /* ******************** Efectos y Movimientos ********************/
