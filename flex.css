@@ -5,7 +5,7 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
-h1, h2, h3, h4, p, div, section, article{
+h1, h2, h3, h4, p, div, section{
     margin: 1rem 0px 1rem 0px;
 }
 p::after{
@@ -319,27 +319,65 @@ main{
 }
 .section1-1, .section2-2{
     width: 100%;
-    height: 50%;
     display: flex;
     text-align: center;
     align-items: center;
+    background-color: #93bbf4;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 }
 
 .artic-text{
     width: 50%;
+    margin: 0 5px 0 5px;
 }
 .artic-img{
     width: 50%;
+    
 }
 .artic-img img{
-    width: 70%;
-    height: auto;
+    width: 100%;
+    display: block;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    
+
 }
 @media screen and (max-width: 480px) {
+    main{
+        width: 96%;
+    }
     .section1-1, .section2-2{
         flex-direction: column;
     }
     .img-order{
         order: 1;
     }
+    .artic-img{
+        width: 100%;
+        height: 70%;
+        object-fit: contain;
+
+    }
+    .artic-text{
+        width: 100%;
+    }
+}
+
+
+
+
+.pruebaimg{
+    width: 40%;
+    height: 30.1rem;
+    border: 1px solid red;
+   
+}
+.pruebaimg img{
+    width: 100%;
+    height: 30rem;
+    display: block;
+    
+    
+    
 }
