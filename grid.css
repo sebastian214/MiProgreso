@@ -68,3 +68,18 @@ img{
     grid-column: 1/3;
     
 }
+
+
+
+
+/* Posicionanmiento con nombres de lineas */
+.contenedor-3{
+    grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr;
+    grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr;
+}
+.item4:nth-child(6){
+    background-color: brown;
+    grid-area: linea-r1 / linea-c1 / linea-r3 / linea-c2;
+    /* grid-column: linea-c1 / linea-c2;
+    grid-row: linea-r1 / linea-r3; */
+}

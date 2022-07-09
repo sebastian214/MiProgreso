@@ -16,7 +16,7 @@
             <h2>Propiedades para el padre</h2>
             <li> <a href="#grid-explicita">Grid Explicita</a></li>
             <li> <a href="#grid-lines">Posicionamientos con Grid Lines</a></li>
-            <li> <a href="#"></a></li>
+            <li> <a href="#nombre-lineas">Posicionamientos con Nombres de Lineas</a></li>
             <li> <a href="#"></a></li>
         </ol>
         <ol class="columna2">    
@@ -46,6 +46,9 @@
        <div class="contenedor-img">
         <img src="./grid-conceptos.png" alt="grid conceptos">
        </div> <br><br><br>
+       <h2>ANOTACIONES!</h2>
+       <P><b>*El tamaño auto en el disenio de la grilla va a acomodar a los items y track en base a su contenido, esta opcion esta por defecto</b></P> <br>
+       <P><b>*Por el acomodo de algun item puede que otros no tengan lineas dosponibles, si los valores no se escuantran en AUTO</b></P> <br>
 
 <h1 id="grid-explicita">Grid Explicita</h1> <br>
 <section class="contenedor-grid contenedor-1">
@@ -91,20 +94,47 @@
     <article class="item-lines">Grid Lines 19</article>
     <article class="item-lines">Grid Lines 20</article>
 </section>
-<h2></h2>
-
-
-
-
-
-
-
-
-
-
-
-
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="grid-lineas">Posicionamiento con Nombres de Lineas</h1> <br>
+<p>Podemos acomodar los items y generar tracks tambien asignandole nombres a las lineas, teniendo en cuanta cuantas tenemos y asignandole un nombre a cada una. Se le va a asiganr un nombre tanto a las lineas en fila como a las lineas de columna y la sintaxis es la siguiente: <br> <b>grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr;</b> En este ejemplo asignamos tres lineas con sus respectivos nombres y proporcion, luego lo hacemos con las filas igualmente</p> <br>
+<section class="contenedor-grid contenedor-3">
+    <article class="item item4">
+        <p>linea nombres 1</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 2</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 3</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 4</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 5</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 6</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 7</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 8</p>
+    </article>
+    <article class="item item4">
+        <p>linea nombres 9</p>
+    </article>
+</section>
+<br> <p>En el cuandro anterior vemos al item 6 <b> posicionado con GRID AREAS y con NOMBRE DE LINEAS</b></p>
+<br>
+
+
+
+
+
+
+
 
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
 
