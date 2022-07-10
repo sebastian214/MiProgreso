@@ -122,3 +122,33 @@ img{
     grid-area: footer;
     border: 1px solid black;
 }
+
+
+
+
+
+
+/* Grid  Implicita */
+.contenedor-implicita{
+    height: 70vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 100px);
+}
+.explicit{
+    background-color: crimson;
+}
+
+
+
+
+
+
+
+/* Inline Grid */
+.inline{
+    width: 45%;
+    display: inline-grid;
+    border: 2px solid red;
+}
+
+

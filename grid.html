@@ -12,12 +12,15 @@
 <body>
     <h1 id="arriba">Temario</h1>
     <div class="temario-grid">
+        <span> <a href="./Index.html">Temario</a></span>
         <ol class="columna1">
             <h2>Propiedades para el padre</h2>
             <li> <a href="#grid-explicita">Grid Explicita</a></li>
             <li> <a href="#grid-lines">Posicionamientos con Grid Lines</a></li>
             <li> <a href="#nombre-lineas">Posicionamientos con Nombres de Lineas</a></li>
             <li> <a href="#grid-areas">Posicionamiento con Grid Areas</a></li>
+            <li> <a href="#grid-implicita">Grid Implicita</a></li>
+            <li> <a href="#inline-grid">Inline Grid</a></li>
         </ol>
         <ol class="columna2">    
             <h2>Propiedades para los hijos</h2>
@@ -133,7 +136,7 @@
 <p><b>HEADER / MAIN / ASIDE / FOOTER </b></p><br>
 
 <img src="./grid-areas.png" alt="grid areas" style="width:500px;">
-
+<br><br>
 <div class="contenedor">
     <header class="header">
         <p>Header</p>
@@ -148,6 +151,67 @@
         <p>Footer</p>
     </footer>
 </div>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="grid-implicita">Grid-Implicita</h1>
+<p>--Las grid pueden ser <b>explicitas o implicitas</b>, una grid explicita es aquella definida en las columnas y filas definidas con los tamanios correspondientes, y una grid implicta es aquella grid que queda por fuera de la explicita definida y se forma con los items en tamanio automatico (segun su contenido) y se van apilando hasta no caber en el contenedor padre y desbordarse</p>
+<br>
+<section class=" contenedor-grid contenedor-implicita">
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item"><p>Grid EXPLICITA</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+    <article class="item explicit"><p>Grid Implicita</p></article>
+</section> <br>
+<p>--Como vemos en el cuadro anterior tenemos la grid explicita con 3 columnas y 4 filas con un tamanio asignado, y el resto de los items van a formar la grid <b> Implicita</b> por fueras de estas lineas, ajustandose a su contenido (tamanio auto) y llegando a desbordar</p>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="inline-grid">Inline-Grid</h1> 
+<br> <br>
+
+<section class=" contenedor-grid contenedor-implicita inline">
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+</section>
+<section class=" contenedor-grid contenedor-implicita inline">
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+    <article class="item"><p>Inline Grid</p></article>
+</section> <br>
+
 
 
 
@@ -157,6 +221,12 @@
 
 
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+
+
+
 
 
 section.section>article*4.article>p>lorem2
