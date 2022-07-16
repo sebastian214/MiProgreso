@@ -52,17 +52,11 @@ header{
 
 .contenedor{
     width: 25rem;
-    height: 35rem;
+    /* height: 60rem; */
     margin-left: auto;
     margin-right: auto;
-    background-color: #272727;
-    display: flex;
-    flex-direction: column;
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    position: relative;
+    background-color: #602727;
+    
 }
 .contenedor__video{
     width: 100%;
@@ -114,11 +108,36 @@ header{
     font-family: "chalet", sans-serif;
     font-size: 24vw;
 }
+.cont--modifi{
+    display: block;
+    width: 30rem;
+    height: 25rem;
+    background-color: aqua
+}
+.cont-vid--modifi{
+    height: ;
+    border: 2px solid red;
+}
+.cont-vid--modifi video{
+    
+    width: 100%;
+    height:35rem;
+}
 
 
 
 
-
-
-
+.caja{
+    width: 30rem;
+    height: 50vh;
+    border: 3px solid red;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.hijo{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
 

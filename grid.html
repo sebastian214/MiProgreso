@@ -21,6 +21,8 @@
             <li> <a href="#grid-areas">Posicionamiento con Grid Areas</a></li>
             <li> <a href="#grid-implicita">Grid Implicita</a></li>
             <li> <a href="#inline-grid">Inline Grid</a></li>
+            <li> <a href="#flujo-grid">Flujo de la Grid</a></li>
+            <li> <a href="#medida-implicita">Asignar tamaños a items implicitos / desborde de contenedor</a></li>
         </ol>
         <ol class="columna2">    
             <h2>Propiedades para los hijos</h2>
@@ -211,17 +213,153 @@
     <article class="item"><p>Inline Grid</p></article>
     <article class="item"><p>Inline Grid</p></article>
 </section> <br>
-
-
-
-
-
-
-
-
-
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="flujo-grid">Flujo de la Grid</h1> <br>
+<p>-Por defecto el flujo de la grid es en Fila, para invertir el flujo se utiliza la propiedad <b>grid-auto-flow y su valor auto es row</b></p> <br>
+<p>Grid con <b>grid-auto-flow:row (auto);</b></p> <br>
+<article class="contenedor-grid flujo">
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">X</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+</article> <br>
+<p> Grid con <b>grid-auto-flow: column; </b></p>
+<br>
+<article class="contenedor-grid flujo column">
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Y</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+</article> <br>
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="medida-implicita">Asignar tamaños a items implicitos</h1>
+<br>
+<p>-Para asignar un tamaño a la grid implicita que se genera automaticamente, se utiliza <b>Grid-auto-row</b> o <b>Grid-auto-column</b> dependiendo la direccion de la misma. La grid implicita con un tamaño asignado puede <b>achicar a la grid explicita, si esta esta asignada en fr</b></p> <br>
+<p>-Si el contenedor grid tiene un tamaño asignado y si la grid implicita y la explicita estan definidas en unidades y no en fr(fraccion) de ser necesario los grid implicitos van a sobresalir del contenendor</p>
+<p>--EN el siguiente cuadro vemos un    CONTENEDOR DE 50VH, UNA EXPLICITA DE 100PX Y UNA IMPLICITA DE 200PX y vemos como se desborda</p>
+<article class="contenedor-grid implicit-tamaños">
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+</article> <br> <br><br><br> <br><br><br> <br><br><br> <br><br><br> <br><br>
+<p>--En el siguente cuadro vemos un CONTENEDOR DE 50VH, UNA EXPLICITA DE <B>1FR</B> Y UNA IMPLICITA DE 200PX lo que hace que los items explicitos se achiquen y le cedan el espacio a las implicitas</p>
+<article class="contenedor-grid implicit-tamaños modifi1">
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+</article> <br> <br>
+<p>--En el siguiente cuadro vemos un Contenedor 50VH UNA GRID EXPLICITA DE 150PX Y UNA IMPLICITA EN AUTO, lo que hace que las implicitas se rellenen hasta el total del contenedor sobrante</p>
+<article class="contenedor-grid implicit-tamaños modifi2">
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+</article> <br> <br>
+<p>--En el siguiente cuadro vemos un contenendor SIN UNA ALTURA DEFINIDA, CON UNA EXPLICITA DE 100PX Y UNA IMPLICITA DE 100PX, lo que hace que los tamaño de los items explicitos e implicitos sean iguales y no desborde el contenedor</p>
+<article class=" modifi3">
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Explicit X </article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+    <article class="item">Implicit</article>
+</article>
+
+
+
+
+
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
 
 
