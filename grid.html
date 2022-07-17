@@ -23,6 +23,7 @@
             <li> <a href="#inline-grid">Inline Grid</a></li>
             <li> <a href="#flujo-grid">Flujo de la Grid</a></li>
             <li> <a href="#medida-implicita">Asignar tamaños a items implicitos / desborde de contenedor</a></li>
+            <li> <a href="#flujo-denso">Flujo Denso de la Grid / Espacios Vacios</a></li>
         </ol>
         <ol class="columna2">    
             <h2>Propiedades para los hijos</h2>
@@ -355,12 +356,64 @@
     <article class="item">Implicit</article>
     <article class="item">Implicit</article>
 </article>
-
-
-
-
-
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="flujo-denso">Flujo Denso de la Grid / Espacios Vacios</h1> <br>
+<p>-Podemos modificar un Item y darle mas celdas a ocupar, <b>siempre desde donde se encuentra</b> asignandole un area especifica, esto va a modificar el orden de la grid explicita y puede generar grid implicitas depende los espacios y el flujo de la grid</p> <br>
+<p>-Con <b>Grid-row y Grid-column</b> podemos modificar los items seleccionandolos y asignarles un area en especifico como vemos en el siguiente cuadro</p>
+<p>-Tambien vemos como <b>teniendo solo 4 filas</b> le definimos con <b>spam</b> dos filas mas y este las ocupa mandando a los items por debajo a crear una grid implicita, <b>Dependiendo el flujo de la grid estos items implicitos se van a genenrar tanto en ROW como en COLUMN</b></p>
+<p>-Tambien vemos que por la asignacion de 5 columnas mas desde donde se encontraba, vemos <B>SE TUVO QUE CORRER AL INIIO DE LAS COLUMNAS</B> para poder estar en las 5 columnas asignadas </p>
+<article class="contenedor-grid flujo-denso">
+    <article class="item">Explicit 1</article>
+    <article class="item">Explicit 2</article>
+    <article class="item">Explicit 3</article>
+    <article class="item">Explicit 4</article>
+    <article class="item">Explicit 5</article>
+    <article class="item">Explicit 6</article>
+    <article class="item">Explicit 7</article>
+    <article class="item">Explicit 8</article>
+    <article class="item">Explicit 9</article>
+    <article class="item">Explicit 10 </article>
+    <article class="item">Explicit 11</article>
+    <article class="item">Explicit 12 </article>
+    <article class="item">Explicit 13 </article>
+    <article class="item">Explicit 14 </article>
+    <article class="item">Explicit 15</article>
+    <article class="item">Explicit 16 </article>
+    <article class="item">Implicit 17</article>
+    <article class="item">Implicit 18</article>
+    <article class="item">Implicit 19</article>
+</article>
+<br>
+<p>- <b>Ahora como cubro esos espacios vacios????</b></p>
+<p>La propiedad <b>Grid-auto-flow con la que definimos el flujo de la grid tiene un valor que puede hacer que se rellenen las celdas vacias, cambiando el algoritmo de el flujo, esta propiedad se llama <B>DENSE</B> veamos como funciona en el siguiente cuadro:</b></p>
+<article class="contenedor-grid flujo-denso flujo-denso-activo">
+    <article class="item">Explicit 1</article>
+    <article class="item">Explicit 2</article>
+    <article class="item">Explicit 3</article>
+    <article class="item">Explicit 4</article>
+    <article class="item">Explicit 5</article>
+    <article class="item">Explicit 6</article>
+    <article class="item">Explicit 7</article>
+    <article class="item">Explicit 8</article>
+    <article class="item">Explicit 9</article>
+    <article class="item">Explicit 10 </article>
+    <article class="item">Explicit 11</article>
+    <article class="item">Explicit 12 </article>
+    <article class="item">Explicit 13 </article>
+    <article class="item">Explicit 14 </article>
+    <article class="item">Explicit 15</article>
+    <article class="item">Explicit 16 </article>
+    <article class="item">Implicit 17</article>
+    <article class="item">Implicit 18</article>
+    <article class="item">Implicit 19</article>
+</article>
+<p>-En el cuadro anterior vemos como el grid 10 y 11 pasa primero antes en el orden que el grid 9 para rellenar esos espacios</p>
+<h2>Estas propiedades estan basadas en un flujo en <b>row</b>, si esta en column seria lo mismo pero el eje Y</h2>
+
+
+
+
+<br> <br> <br>
 
 
 
