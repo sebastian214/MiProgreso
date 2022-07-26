@@ -28,7 +28,7 @@
             <li> <a href="#item-superposicion">Grid Items En Capas (Superposicion)</a></li>
             <li> <a href="#orden-alineacion">Ordern y Alineacion  de los Items</a></li>
             <li> <a href="#grid-tracks">Alineacion de Grid Tracks</a></li>
-            <li> <a href="#"></a></li>
+            <li> <a href="#min-max">MinMax / max-content min-content</a></li>
         </ol>
         <ol>
             <h2>Casos Practicos</h2>
@@ -439,7 +439,7 @@
     <article class="item">Item 5</article>
 </div>
 <br> <br>
-<h1>La alineacion de los items es similar a la de flexbox con una variante en el eje principal, para linear en el eje principar usamos <b>JUSTIFY-ITEMS</b> y para el eje sobrante <b>ALIGN-ITEMS</b> teniendo los siguientes valores <b>stretch (por defecto) / start / end Y center</b></h1> <br>
+<h2>La alineacion de los items es similar a la de flexbox con una variante en el eje principal, para linear en el eje principar usamos <b>JUSTIFY-ITEMS</b> y para el eje sobrante <b>ALIGN-ITEMS</b> teniendo los siguientes valores <b>stretch (por defecto) / start / end Y center</b></h2> <br>
 <p>La alineacion se realiza dentro las grid lineas y no del contenedor, en el siguente cuadro vemos un contenedor con un 100%, tres columnas de 100px y los items con un JUSTIFY-ITEMS center, lo que hace que se pase del valor auto (stretch) a centrarse dentro de la columna </p> <br>
 <div class="contenedor-grid contenedor--alineacion">
     <article class="item">Item 1</article>
@@ -462,11 +462,32 @@
     <article class="item">Item 4</article>
     <article class="item">Item 5</article>
 </div>
-
-
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="min-max">MinMax / Max-content y Min-content</h1><br>
+<p>La funcion <b>minmax</b> va a establecer el tamaño de la columna o fila en dos valores, uno minimo y uno maximo, estos pueden ser expresados en unidades de medida o en los valores propios de esta funcion que  son <b>min-content y max-content</b></p>
+<h2>Min-content y Max-content</h2>
+<p>En estos valores el tamaño se va a ajustar a el minimo o al maximo contenido que tengan los items que esten en esta columna, veamos un ejemplo con un <b>MIN de min-content y un MAX de max-content</b></p> <br>
+<div class="contenedor-grid contenedor--min-content">
+    <article class="item">Loremmm ipsum dolor sitd amet.</article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item</article>
+    <article class="item">Item 5</article>
+</div>
+<p>En el cuadro anterior vemos como toda la grid track toma el valor de minimo o maximo de contenido, asignando este valor a toda la misma aun que no tenga contenido</p>
+<br>
+<p>Otro ejemplo con un <b>MIN de 100px</b> y con <b> un MAX de max-content </b></p>
+<br>
+<div class="contenedor-grid contenedor--min-content max-content">
+    <article class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio molestias cumque nobis reprehenderit quasi laudantium eius facilis, iste officia quas?</article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item</article>
+    <article class="item">Item 5</article>
+</div>
 
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
-
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
 
 
 section.section>article*4.article>p>lorem2

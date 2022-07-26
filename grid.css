@@ -27,6 +27,7 @@ p{
     /* height: 50vh; */
     border: 4px dashed black;
     display: grid;
+    /* background-color: black; */
 }
 .item{
     /* width: 10rem;
@@ -324,4 +325,19 @@ p{
     grid-template-rows: 100px 100px;
     justify-content: center;
     align-content: center;
+}
+
+
+
+
+
+
+/* Min-max */
+.contenedor--min-content{
+    width: 50%;
+    height: 40vh;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+}
+.max-content{
+    grid-template-columns: repeat(2, minmax(50px, max-content));
 }
