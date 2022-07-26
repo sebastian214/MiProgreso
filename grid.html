@@ -14,7 +14,6 @@
     <div class="temario-grid">
         <span> <a href="./Index.html">Temario</a></span>
         <ol class="columna1">
-            <h2>Propiedades para el padre</h2>
             <li> <a href="#grid-explicita">Grid Explicita</a></li>
             <li> <a href="#grid-lines">Posicionamientos con Grid Lines</a></li>
             <li> <a href="#nombre-lineas">Posicionamientos con Nombres de Lineas</a></li>
@@ -26,10 +25,9 @@
             <li> <a href="#flujo-denso">Flujo Denso de la Grid / Espacios Vacios</a></li>
         </ol>
         <ol class="columna2">    
-            <h2>Propiedades para los hijos</h2>
             <li> <a href="#item-superposicion">Grid Items En Capas (Superposicion)</a></li>
-            <li> <a href="#"></a></li>
-            <li> <a href="#"></a></li>
+            <li> <a href="#orden-alineacion">Ordern y Alineacion  de los Items</a></li>
+            <li> <a href="#grid-tracks">Alineacion de Grid Tracks</a></li>
             <li> <a href="#"></a></li>
         </ol>
         <ol>
@@ -430,11 +428,43 @@
     <article class="item">9</article>
     <article class="item">Expandir para ver bien la simetria</article>
 </div>
-
-
-
-
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+<h1 id="orden-alineacion">Ordern y Alineacion  de los Items</h1> <br>
+<p>Para modificar el orden delos items utilizamos la propiedad <b>Order</b> como en Flexbox</p> <br>
+<div class="contenedor-grid contenedor--order">
+    <article class="item">Item 1</article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item 4</article>
+    <article class="item">Item 5</article>
+</div>
+<br> <br>
+<h1>La alineacion de los items es similar a la de flexbox con una variante en el eje principal, para linear en el eje principar usamos <b>JUSTIFY-ITEMS</b> y para el eje sobrante <b>ALIGN-ITEMS</b> teniendo los siguientes valores <b>stretch (por defecto) / start / end Y center</b></h1> <br>
+<p>La alineacion se realiza dentro las grid lineas y no del contenedor, en el siguente cuadro vemos un contenedor con un 100%, tres columnas de 100px y los items con un JUSTIFY-ITEMS center, lo que hace que se pase del valor auto (stretch) a centrarse dentro de la columna </p> <br>
+<div class="contenedor-grid contenedor--alineacion">
+    <article class="item">Item 1</article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item 4</article>
+    <article class="item">Item 5</article>
+</div>
+<h2>Para alinear un item en concreto vamos a utilizar <B>JUSTIFY-SELF Y ALIGN-SELF !!</B></h2>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="grid-tracks">Alineacion de Grid Tracks</h1>
+<br><p>Para alinear los tracks usamos <b>Justify-content y  align-content</b> como en flexbox, sus valores por defecto son start. <b>start / end / center / space-between / space-around / space-evenly</b></p>
+<p>En el siguiente cuadro vemos un contenedor con un ancho y un alto designado, y con un Justify-content center y un align-content center, lo que posicionaa los tracks en un centrado perfecto con respecto al contenedor
+</p> <br>
+<div class="contenedor-grid contenedor--tracks">
+    <article class="item">Item 1</article>
+    <article class="item">Item 2</article>
+    <article class="item">Item 3</article>
+    <article class="item">Item 4</article>
+    <article class="item">Item 5</article>
+</div>
+
+
+
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
 
 

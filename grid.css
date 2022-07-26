@@ -280,3 +280,48 @@ p{
     grid-column: 2/6;
     grid-row: 2/6;
 }
+
+
+
+
+
+/* Orden y Alineacion de los Items */
+.contenedor--order{
+    width: 50%;
+    height: 40vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+}
+.contenedor--order .item:nth-child(1){
+    order: 1;
+    background-color: aquamarine;
+}
+.contenedor--order .item:nth-child(5){
+    order: -1;
+    background-color: blueviolet;
+}
+
+
+
+
+
+/* Alineacion de items */
+.contenedor--alineacion{
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px;
+    justify-items: center;
+}
+
+
+
+
+/* Alineacion Tracks */
+.contenedor--tracks{
+    width: 50%;
+    height: 40vh;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 100px 100px;
+    justify-content: center;
+    align-content: center;
+}
