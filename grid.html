@@ -29,6 +29,9 @@
             <li> <a href="#orden-alineacion">Ordern y Alineacion  de los Items</a></li>
             <li> <a href="#grid-tracks">Alineacion de Grid Tracks</a></li>
             <li> <a href="#min-max">MinMax / max-content min-content</a></li>
+            <li> <a href="#patrones-repetitivos">Patrones Repetitivos</a></li>
+            <li> <a href="#fit-fill">Auto-fill y Auto fit</a></li>
+            <li> <a href="#grid-responsive">Grids Responsive sin Media Queries</a></li>
         </ol>
         <ol>
             <h2>Casos Practicos</h2>
@@ -485,6 +488,87 @@
     <article class="item">Item</article>
     <article class="item">Item 5</article>
 </div>
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="patrones-repetitivos">Patrones Repetitivos</h1> <br>
+<p>-Se pueden hacer patrones repetitivos con la funcion <b>repeat</b> en el siguiente cuadro vemos un a grid repetida dos veces en los valores 2, 10% 20% 30% 40% / Sintaxis: <b>grid-template-rows: repeat(2, 10% 20% 30% 40%);</b> </p> <br> 
+<div class="contenedor-grid grid-repetitivos">
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item yellowgreen">Grid Item`</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+    <article class="item">Grid Repetida</article>
+</div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
+
+<h1 id="fit-fill">Auto-fill y Auto fit</h1> <br>
+<h2>Auto-fill</h2>
+<p>-Auto-fill va a rellenr la grid container con tracks generados dinamicamente, sin tener en cuenta los items que tengamos, <b>INSPECCIONAR PARA VER LOS TRACKS</b></p> 
+<div class="contenedor-grid grid-fill">
+    <article class="item">
+        <p>auto fill 1</p>
+    </article>
+    <article class="item">
+        <p>auto fill 2</p>
+    </article>
+    <article class="item">
+        <p>auto fill 3</p>
+    </article>
+    <article class="item">
+        <p>auto fill 4</p>
+    </article>
+    <article class="item">
+        <p>auto fill 5</p>
+    </article>
+</div>
+<br>
+<h2>Auto-fit</h2>
+<p>-Auto-fit va a generar los tracks con respecto a los items existentes </p>
+<br>
+<p id="grid-responsive"><b>EN EL SIGUIENTE CUADRO GENERAMOS UNA GRID RESPONSIVE SIN MEDIA QUERIES,</b> definimos la funcion <b>REPEAT</b> con el valor de <b>AUTO-FIT</b> para que genere los tracks con respecto a los items, luego definimos la funcion <b>MINMAX</b> con un valor minimo el que queramos por ejemplo ppueden ser 200px para una caja en smarphone, y el valor maximo lo definimos en <b>1FR</b> para que los items abarquen todo el contenedor</p> <br>
+<div class="contenedor-grid grid-fit">
+    <article class="item">
+        <p>auto fit 1</p>
+    </article>
+    <article class="item">
+        <p>auto fit 2</p>
+    </article>
+    <article class="item">
+        <p>auto fit 3</p>
+    </article>
+    <article class="item">
+        <p>auto fit 4</p>
+    </article>
+</div>
+
 
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>
 <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br><br>

@@ -341,3 +341,37 @@ p{
 .max-content{
     grid-template-columns: repeat(2, minmax(50px, max-content));
 }
+
+
+
+
+
+
+/* Patrones Repetitivos */
+.grid-repetitivos{
+    width: 50%;
+    height: 50vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 10% 20% 30% 40%);
+
+}
+.yellowgreen{
+    background-color: yellowgreen;
+}
+
+
+
+
+
+/* Fill - Fit */
+.grid-fill{
+    width: 70%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+}
+.grid-fit{
+    width: 70%;
+    height: 40vh;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
