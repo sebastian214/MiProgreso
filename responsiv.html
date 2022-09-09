@@ -15,7 +15,7 @@
             <li><a href="#cajas-responsivas">Cajas Responsivas con Max y min </a></li>
             <li><a href="#multimedia-flexible">Multimedia Flexible</a></li>
             <li><a href="#srcset-sizes">Atributos Srcset y sizes</a></li>
-            <li><a href="#"></a></li>
+            <li><a href="#Picture">Etiqueta Picture</a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
@@ -60,6 +60,7 @@
     <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
 
     <h1 id="srcset-sizes">Atributos Srcset y sizes</h1>
+    <p>El atributo srcset y sizes en convinacion los usaremos para optimizar sitios web <b>srcset</b> para cambiar a imagenes mas pequeñas y el atributo <b>sizes</b> para definirles un tamaño especifico</p> <br>
     <p>El atriburo  <b>srcset</b> nos permite cambiar imagenes por su tamaño real dando la posibilidad de que una imagen muy grande no se cargue al iniciar la pagina en un dispositivo pequeño o una imagen muy pequeña no tenga que estirarse en un dispositivo grande. Para definir las cargas de imagenes por tamaños podemos utilizar la relacion de aspecto o por ancho de la pantalla, definida en pixeles y expresada en el html con la <b>w</b> </p> <br>
     <img src="./responsive-arquitectura/img/html5-3d-600.png"
      srcset="./responsive-arquitectura/img/html5-3d-600.png 600w, ./responsive-arquitectura/img/html5-3d-900.png 900w, ./responsive-arquitectura/img/html5-3d-1200.png 1200w" alt="">
@@ -72,6 +73,16 @@
     <p>En el ajemplo anterior tenenmos una imagen que hasta los 600px va a mantener un ancho de 300px, a 700 px un ancho de 400 , a 1000px un ancho de 800px y a un ancho de pantalla de 1200px la imagen no va a pasar los 1000px</p>
 
     <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
+
+    <h1 id="Picture" >Etiqueta Picture</h1>
+    <p>La etiqueta Picture se va a utilizar para cambiar imagenes pensando en un modo artistico, no para la optimizacion si bien podemos usar media queries la principal tares de esta etiqueta es la de cambio de imagenes a modo de diseno artistico, La etiquete funciona como una caja contenedora donde podemos tener varias imagenes, y la que se va a mostrar como primer medida es la de la itiqueta <b>img</b>, luego definimos las siguientes con sus respectivas media queries o types, las cuales van a estar con un display none hasta que sea aplicada. veamos el siguiente ejemplo!</p>
+    <picture>
+    <source srcset="./responsive-arquitectura/img/kitten-large.png" media="(min-width: 1024px)">
+    <source srcset="./responsive-arquitectura/img/kitten-medium.png" media="(min-width: 600px)">
+    <img src="./responsive-arquitectura/img/kitten-small.png" alt="">
+    </picture> <br>
+    <p>En el siguiente ejemplo vemos tres imagenes dentro de la etiqueta picture, una small, medium y large, utilizamos la media queries min-width para que hasta cierto width se mantenga la pequeña y asi se valla cambiando la imagen dando el efecto de un gato en movimiento</p>
+
     <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
     <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
     
