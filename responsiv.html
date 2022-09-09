@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="responsiv.css">
+</head>
+<body>
+    <h1 id="arriba"> Responsive Temario</h1>
+    <div class="temario-grid">
+        <ol class="columna1">
+            <li><a href="#cajas-responsivas">Cajas Responsivas con Max y min </a></li>
+            <li><a href="#multimedia-flexible">Multimedia Flexible</a></li>
+            <li><a href="#srcset-sizes">Atributos Srcset y sizes</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ol>
+        <ol class="columna2">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ol>
+    </div>  
+    <br> 
+    <h1>Introduccion</h1> 
+    <h2>Principios del Responsiv Desing</h2>  
+    <ol>
+        <li>Grid Flexibles</li>
+        <li>Imagenes Flexibles</li>
+        <li>Media Queries Necesarias</li>
+    </ol>
+    <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+    <h1 id="cajas-responsivas"> Cajas Responsivas con max y min</h1>
+    <p>Se puede dar tamaño a una caja solo definiendo dimensiones maximas y minimas, si el contenedor no tiene contenido para que se muestre el tamaño asignado necesitaremos asignar tamaños minimos y maximos tando de ancho como de alto, de lo contrario no se mostrara la caja en las dimensiones, <b>otra opcion es asignar tamaños maximos en ancho y el alto dejarlo al contenido, en este caso funcionara el tamaño maximo en ancho</b></p> <br>
+    <div class="box2">
+
+    </div>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perspiciatis molestiae eius quibusdam illo dolore vel, perferendis maxime cumque iure dicta magni amet nulla distinctio aliquam officia sunt alias quos.</p>
+    </div>
+    <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br>
+
+    <h1 id="multimedia-flexible">Mutimedia Flexible</h1>
+    <p>Para hacer las multimedias Flexibles podemos aplicar una regla general para todos los archivos multimedia: <b>Max-width:100%; y un Heigth:auto; </b> </p>
+    <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
+
+    <h1 id="srcset-sizes">Atributos Srcset y sizes</h1>
+    <p>El atriburo  <b>srcset</b> nos permite cambiar imagenes por su tamaño real dando la posibilidad de que una imagen muy grande no se cargue al iniciar la pagina en un dispositivo pequeño o una imagen muy pequeña no tenga que estirarse en un dispositivo grande. Para definir las cargas de imagenes por tamaños podemos utilizar la relacion de aspecto o por ancho de la pantalla, definida en pixeles y expresada en el html con la <b>w</b> </p> <br>
+    <img src="./responsive-arquitectura/img/html5-3d-600.png"
+     srcset="./responsive-arquitectura/img/html5-3d-600.png 600w, ./responsive-arquitectura/img/html5-3d-900.png 900w, ./responsive-arquitectura/img/html5-3d-1200.png 1200w" alt="">
+    <p>En la imagen anterior vemos cargada la imagen a 900px, pero si achicamos la pantalla a 600 px y recargamos se va a cambiar la imagen</p>
+    <h2>El atributo <b>sizes</b></h2>
+    <p>El atriburo sizes va a funcionar en convinacion con el atributo srcset y es como una @media queries, podemos definir el tamanio de la imagen cargada depende la resolucion definida en la pantalla, utilizamos para ello <b>max-width y min-width</b> veamos el siguiente ejemplo:</p> 
+    <img src="./responsive-arquitectura/img/html5-3d-600.png"
+     srcset="./responsive-arquitectura/img/html5-3d-600.png 600w, ./responsive-arquitectura/img/html5-3d-900.png 900w, ./responsive-arquitectura/img/html5-3d-1200.png 1200w"
+     sizes="(max-width: 600px) 300px, (max-width: 700px) 400px, (max-width: 1000px) 800px, (min-width: 1200px) 1000px" alt=""> <br>
+    <p>En el ajemplo anterior tenenmos una imagen que hasta los 600px va a mantener un ancho de 300px, a 700 px un ancho de 400 , a 1000px un ancho de 800px y a un ancho de pantalla de 1200px la imagen no va a pasar los 1000px</p>
+
+    <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
+    <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
+    <br><a href="#arriba">Top↑</a> <span> <a href="./Index.html">Temario</a></span> <hr><br> 
+    
+        
+</body>
+</html>
