@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosjs.css">
+    <script src="javascript.js"></script>
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Javascript Level 1</h1>
+    <h2>Tipos de Datos</h2>
+    <p class="lista">String - Number - Boolean - Symbol </p>
+    <p>String = "Cadena de texto"</p>
+    <p>Number = 19</p>
+    <p>Boolean = 0 y 1 o True/False </p>
+    <br>
+    <h2>Casos Especiales de datos (variable no definida o con error)</h2>
+    <p class="lista ">Undefined - null - Nan</p>
+    <p>Undefined = </p>
+    <br>
+    <h2>Cadenas de texto</h2>
+    <p>Una cadena de texto es un texto entre comillas dobles o simples</p>
+    <br>
+    <h2>Propiedades y metodos</h2>
+    <p class="lista"> Propiedades</p> 
+    <p>Caracteristicas y atributos</p> <br>
+    <p class="lista"> Metodos</p>
+    <p>Acciones o Funciones que me van a permitir ejecutar algo con la variable o objeto en ejecucion</p>
+    <br> <br>
+    <h2>Concatenacion</h2>
+    <p>Concatenar es unir una cadena de texto con una variable para la inteaccion se utiliza para ello el signo +</p>
+    <br> <br>
+    <h2>Template String</h2>
+    <p class="lista">Interpolacion de variables</p>
+    <p>La interpolacion de varibles es meter dentro de una cadena de texto el valor dinamicamente de una variable</p>
+    <p>Para realizar esta interpolacion tenemos que hacer uso de una caracteristica de las cadenas de texto llamada <b>Template String</b></p>
+    <p>Para esta interpolacion utilizamos el agento grave o invertido `` </p>
+    <script>
+        let nombre = ("Sebastian")
+        let apellido = ("Saez")
+        let saludo2 =`Hola mi nombre es ${nombre} ${apellido}.`; 
+        console.log (saludo2)
+    </script>
+    <p class="lista">Otra caracteristica de la comilla invertida</p>
+    <p>Las comillas invertidas tambien se utilizan para generar contenido html automaticamente ya que permite colocar cadenas de texto de forma desordenada con saltos de linea y indentaciones html</p>
+    <script>
+        let ul = 
+     `<ul>
+        <li>Primaver</li>
+        <li>Verano</li>
+        <li>Otro</li>
+    </ul>`
+    console.log (ul)
+    </script>
+    <p>De esta manera podemos no solo concatenar, tambien podemos utilizarlo para otras propiedades</p>
+    <br><br><br><br><br>
+</body>
+</html>
